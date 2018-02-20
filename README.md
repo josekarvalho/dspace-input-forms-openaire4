@@ -17,4 +17,4 @@ At the end of the document, there are reused lists of:
 - Identifiers Types
 - Thesis Types
 - CC Licenses Options
-- Language Optins
+- Language Options
