@@ -1,0 +1,1689 @@
+<?xml version="1.0"?>
+<!DOCTYPE input-forms SYSTEM "input-forms.dtd">
+<input-forms>
+    <!-- The form-map maps collection handles to forms. DSpace does not       -->
+    <!-- require a collection name to be unique, not even within a community. -->
+    <!-- DSpace does however ensure that each collection's handle is unique.  -->
+    <!-- Form-map provides the means to associate a unique collection name    -->
+    <!-- with a form. The form-map also provides the special handle "default" -->
+    <!-- (which is never a collection), here mapped to "traditional". Any     -->
+    <!-- collection which does not appear in this map will be associated with -->
+    <!-- the mapping for handle "default".                                    -->
+    <form-map>
+        <name-map collection-handle="default" form-name="traditional" />
+    </form-map>
+    <!-- The form-definitions map lays out the detailed definition of all the -->
+    <!-- submission forms. Each separate form set has a unique name as an     -->
+    <!-- attribute. This name matches one of the names in the form-map. One   -->
+    <!-- named form set has the name "traditional"; as this name suggests,    -->
+    <!-- it is the old style and is also the default, which gets used when    -->
+    <!-- the specified collection has no correspondingly-named form set.      -->
+    <!--                                                                      -->
+    <!-- Each form set contains an ordered set of pages; each page defines    -->
+    <!-- one submission metadata entry screen. Each page has an ordered list  -->
+    <!-- of field definitions, Each field definition corresponds to one       -->
+    <!-- metatdata entry (a so-called row), which has a DC element name, a    -->
+    <!-- displayed label, a text string prompt which is called a hint, and    -->
+    <!-- an input-type. Each field also may hold optional elements: DC        -->
+    <!-- qualifier name, a repeatable flag, and a text string whose presence  -->
+    <!-- serves as a 'this field is required' flag.                           -->
+     <form-definitions>
+            <form name="traditional">
+                <page number="1">
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Autores</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza os nomes dos autores do trabalho.</hint>
+                        <required></required>
+                    </field>
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>T&#xED;tulo</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza o t&#xED;tulo principal do registo.</hint>
+                        <required>Tem que introduzir um t&#xED;tulo principal do registo.</required>
+                    </field>
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier>alternative</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Outros T&#xED;tulos</label>
+                        <input-type>onebox</input-type>
+                        <hint>Se necess&#xe1;rio, indique o t&#xED;tulo alternativo ou tradu&#xe7;&#xE3;o.</hint>
+                        <required></required>
+                    </field>
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>date</dc-element>
+                        <dc-qualifier>issued</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Data</label>
+                        <input-type>date</input-type>
+                        <hint>Forne&#xe7;a a data da publica&#xe7;&#xE3;o ou distribui&#xe7;&#xE3;o p&#xFA;blica. Pode deixar o m&#xea;s e/ou o dia em branco se n&#xE3;o se aplicar.</hint>
+                        <required>Tem que inserir pelo menos o ano.</required>
+                    </field>
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>publisher</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Editora</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza o nome da entidade respons&#xE1;vel pela publica&#xe7;&#xE3;o ou impress&#xE3;o.</hint>
+                        <required></required>
+                    </field>
+                   <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>relation</dc-element>
+                        <dc-qualifier>publisherversion</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Vers&#xE3;o da Editora</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o. 
+    Exemplo: http://www.springerlink.com/.</hint>
+                        <required></required>
+                    </field>
+
+                    <!-- Substituir 	 -->
+                  <!--  <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>firstPage</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Primeira P&#xE1;gina</label>
+                        <input-type>onebox</input-type>
+                        <hint>No caso de artigos em revista, cap&#xED;tulos de livro, etc...</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>lastPage</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>&#xDA;ltima P&#xE1;gina</label>
+                        <input-type>onebox</input-type>
+                        <hint>No caso de artigos em revista, cap&#xED;tulos de livro, etc...</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>issue</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>N&#xFA;mero da Edi&#xe7;&#xE3;o</label>
+                        <input-type>onebox</input-type>
+                        <hint>Se o registo tiver um n&#xFA;mero de edi&#xe7;&#xE3;o associado.</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>volume</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Volume</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza o n&#xFA;mero do volume ou a s&#xE9;rie da revista em que foi publicado.</hint>
+                        <required></required>
+                    </field> -->
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>identifier</dc-element>
+                        <dc-qualifier>citation</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Cita&#xe7;&#xE3;o</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza a refer&#234;ncia bibliogr&#xE1;fica (cita&#xe7;&#xE3;o) deste artigo.</hint>
+                        <required></required>
+                    </field>
+                    
+                   <!-- <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>relation</dc-element>
+                        <dc-qualifier>ispartofseries</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>S&#xE9;rie/N&#xFA;mero</label>
+                        <input-type>series</input-type>
+                        <hint>Introduza o nome da s&#xE9;rie e n&#xFA;mero atribu&#xED;do ao item pela sua comunidade.</hint>
+                        <required></required>
+                    </field> -->
+                    
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>identifier</dc-element>
+                        <dc-qualifier>doi</dc-qualifier>
+                        <repeatable></repeatable>
+                        <label>DOI</label>
+                        <input-type>onebox</input-type>
+                        <hint>Se este registo tiver algum identificador DOI associado, insira em baixo.</hint>
+                        <required></required>
+                    </field>
+
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>identifier</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                        <repeatable>true</repeatable>
+                        <label>Identificadores</label>
+                        <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                        <hint>Se este registo tiver algum identificador associado, insira em baixo.</hint>
+                        <required></required>
+                    </field>
+                    
+                    
+
+                   <!-- <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>peerreviewed</dc-element>
+                        <label>Revis&#xE3;o por Pares (peer-review)</label>
+                        <input-type value-pairs-name="yes_no">list</input-type>
+                        <hint>Indique se a vers&#xE3;o que est&#xE1; a depositar foi revista por pares especialistas (refereeing).</hint>
+                        <required></required>
+                    </field> -->
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>type</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Tipo</label>
+                        <input-type value-pairs-name="common_types">dropdown</input-type>
+                        <hint>Selecione o tipo do conte&#xFA;do que est&#xE1; a depositar.</hint>
+                        <required></required>
+                    </field>
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>language</dc-element>
+                        <dc-qualifier>iso</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Idioma</label>
+                        <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                        <hint>Selecione o idioma do conte&#xFA;do principal do trabalho. Se a l&#xED;ngua N&#xE3;o aparecer na lista em baixo selecione "Outra". Se ao conte&#xFA;do N&#xE3;o se aplicar uma l&#xED;ngua (por exemplo, uma imagem) selecione "N/A".</hint>
+                        <required>Insira o idioma do documento</required>
+                    </field>
+
+                <field><!-- #TODO Colocar com esquema OAIRE oaire.version -->
+			    <dc-schema>dc</dc-schema>
+			    <dc-element>description</dc-element>
+			    <dc-qualifier>version</dc-qualifier>
+			    <repeatable>false</repeatable>
+			    <label>Estado da Publica&#xe7;&#xE3;o</label>
+			    <input-type value-pairs-name="dc_publicationstatus">dropdown</input-type>
+			    <hint>Indique o estado atual da publica&#xe7;&#xE3;o</hint>
+			    <required>Insira o Estado da Publica&#xe7;&#xE3;o</required>
+                   </field>
+                    
+                   <!--  <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>title</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>T&#xED;tulo da Revista, Peri&#xF3;dico, Monografia ou Evento</label>
+                        <input-type>onebox</input-type>
+                        <hint></hint>
+                    </field>
+                    <field>
+                        <dc-schema>degois</dc-schema>
+                        <dc-element>publication</dc-element>
+                        <dc-qualifier>location</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Local de Edi&#xe7;&#xE3;o ou do Evento</label>
+                        <input-type>onebox</input-type>
+                        <hint></hint>
+                    </field> -->
+                </page>
+
+                <page number="2">
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>subject</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <!-- An input-type of twobox MUST be marked as repeatable -->
+                        <repeatable>true</repeatable>
+                        <label>Palavras Chave</label>
+                        <input-type>twobox</input-type>
+                        <hint>Introduza as palavras chave ou assuntos.</hint>
+                        <required></required>
+                        <vocabulary>srsc</vocabulary>
+                    </field>
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier>abstract</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Resumo</label>
+                        <input-type>textarea</input-type>
+                        <hint>Introduza em baixo o resumo (abstract) no idioma principal do registo. </hint>
+                        <required></required>
+                    </field>
+
+                    <!-- 
+
+					Pensar em alternativas para metadados:
+					http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_projectid.html#dci-fundingreference
+				
+				Example:
+
+					<fundingReference>
+						  <funderName>European Commission</funderName>
+						  <funderIdentifier funderIdentifierType="Crossref Funder ID">http://doi.org/10.13039/100010661</funderIdentifier>
+						  <fundingStream>Horizon 2020 Framework Programme</fundingStream>
+						  <awardNumber awardURI="http://cordis.europa.eu/project/rcn/194062_en.html">643410</awardNumber>
+						  <awardTitle>Open Access Infrastructure for Research in Europe 2020</awardTitle>
+					</fundingReference>
+
+                    -->
+
+
+                     <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>relation</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Projeto Financiado</label>
+                        <input-type>onebox</input-type>
+                        <hint>Caso a publica&#xe7;&#xE3;o tenha resultado de projeto(s) financiado(s) pela Comiss&#xE3;o Europeia (FP7, H2020, ERC), Funda&#xe7;&#xE3;o para a Ci&#234;ncia e Tecnologia ou Wellcome Trust, identifique esse(s) projeto(s) aqui. Essa identifica&#xe7;&#xE3;o &#xE9; geralmente um requisito dos financiadores.
+    Para identificar o(s) projeto(s) insira um dos seus elementos identificativos (n&#xFA;mero, nome, acr&#xf3;nimo ou refer&#xEA;ncia) e selecione da lista que lhe &#xE9; apresentada. D&#xfa;vidas ou mais informa&#xe7;&#xf5;es aceda &lt;a href="http://projeto.rcaap.pt/index.php/lang-pt/como-auto-arquivar-documentos/politica-fct" target="_blank"&gt;aqui&lt;/a&gt;</hint>
+                    </field>
+
+                    
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>rights</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Acesso</label>
+                        <input-type value-pairs-name="common_rights">dropdown</input-type>
+                        <hint>Esta cole&#xe7;&#xE3;o &#xE9; de Acesso Aberto. Caso pretenda que este documento tenha outra condi&#xe7;&#xE3;o de acesso indique-a aqui.</hint>
+                        <required></required>
+                    </field>
+
+                   <!-- 
+
+                   Redefinir http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_embargoenddate.html#dci-dateembargo 
+                   
+                   --> 
+
+                    <field><!-- Usar oaire.date.available -->
+                         <dc-schema>dc</dc-schema>
+                         <dc-element>date</dc-element>
+                         <dc-qualifier>embargo</dc-qualifier>
+                         <repeatable>false</repeatable>
+                         <label>Data Final do Embargo</label>
+                         <input-type>date</input-type>
+                         <hint>Caso tenha indicado &#34;Acesso Embargado&#34; no campo &#34;Acesso&#34;, indique a data do final do embargo, a partir da qual o documento passar&#xE1; a estar dispon&#xED;vel em Acesso Aberto. Deve indicar pelo menos o Ano e o M&#xEA;s.</hint>
+                    </field>
+
+
+
+
+                  <!--  <field> <! Identificar forma ou manter Requisito FCT 
+                        <dc-schema>rcaap</dc-schema>
+                        <dc-element>embargofct</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Justifica&#xe7;&#xE3;o do Prolongamento do Embargo</label>
+                        <input-type>textarea</input-type>
+                        <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
+                    </field> -->
+                
+               <!--  <field>
+			    <dc-schema>rcaap</dc-schema>
+			    <dc-element>contributor</dc-element>
+			    <dc-qualifier>authoremail</dc-qualifier>
+			    <repeatable>false</repeatable>
+			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+			    <input-type>onebox</input-type>
+			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+			    <required></required>
+                    </field> -->
+
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>rights</dc-element>
+                        <dc-qualifier>uri</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Licen&#xe7;a Creative Commons</label>
+                        <input-type value-pairs-name="creative_commons">dropdown</input-type>
+                        <hint>Associe uma licen&#xe7;a &lt;a href="https://creativecommons.org/licenses/" target="_blank" &gt;Creative Commons 4.0 Internacional&lt;/a&gt; ao seu trabalho, escolhendo-a da lista apresentada. No caso de trabalhos financiados pela FCT o uso da licen&#xe7;a CC-BY &#xE9; recomendado, mas torna-se obrigat&#xf3;rio caso a publica&#xe7;&#xE3;o tenha tido Custos de Processamento da Publica&#xe7;&#xE3;o (CPP ou APC) suportados por verbas da FCT. Saiba mais &lt;a href="http://projeto.rcaap.pt/index.php/lang-pt/como-auto-arquivar-documentos/politica-fct" target="_blank" &gt;aqui&lt;/a&gt;</hint>
+                    </field>
+                    
+                    <field><!-- OK -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier>sponsorship</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Patrocinadores</label>
+                        <input-type>textarea</input-type>
+                        <hint> Introduza os nomes de eventuais patrocinadores na caixa em baixo. </hint>
+                        <required></required>
+                    </field>
+
+                <!--     <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Descri&#xe7;&#xE3;o</label>
+                        <input-type>textarea</input-type>
+                        <hint> Descri&#xe7;&#xE3;o adicional e coment&#xE1;rios. </hint>
+                        <required></required>
+                    </field> -->
+
+                </page>
+            </form>
+            <!-- Thesis form -->
+            
+            <form name="thesis">
+                <page number="1">
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>T&#xED;tulo</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza o t&#xED;tulo da tese ou disserta&#xE7;&#xE3;o. O t&#xED;tulo n&#xE3;o deve terminar com pontua&#xe7;&#xE3;o. N&#xE3;o &#xE9; poss&#xED;vel formatar em it&#xE1;lico. Se tiver um subt&#xED;tulo coloque [ : ]. Use mai&#xFA;sculas apenas para a primeira letra e nomes pr&#xF3;prios.
+             &lt;br&gt;Exemplo: &lt;b&gt;T&#xED;tulo do Trabalho : subt&#xED;tulo do trabalho&lt;/b&gt;
+             </hint>
+                        <required>Tem que introduzir um t&#xED;tulo principal do trabalho.</required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier>alternative</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Outro T&#xED;tulo</label>
+                        <input-type>onebox</input-type>
+                        <hint>Introduza se necess&#xE1;rio outro t&#xED;tulo associado ao trabalho.</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Autor</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza o nome do autor da tese ou disserta&#xe7;&#xE3;o.</hint>
+                        <required>Tem que introduzir em baixo o nome do autor.</required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>advisor</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Orientador(es)</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza em baixo o nome do(s) orientador(es) ou revisor(es) do trabalho.</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>date</dc-element>
+                        <dc-qualifier>issued</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Data de Defesa</label>
+                        <input-type>date</input-type>
+                        <hint>Introduza a data em que o trabalho foi defendido.</hint>
+                        <required>Tem que inserir pelo menos o ano.</required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>date</dc-element>
+                        <dc-qualifier>submitted</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Data de submiss&#xE3;o</label>
+                        <input-type>date</input-type>
+                        <hint>Introduza a data em que o trabalho foi submetido para defesa.</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>identifier</dc-element>
+                        <dc-qualifier>tid</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Identificador do Trabalho (TID)</label>
+                        <input-type>onebox</input-type>
+                        <hint>Indique o identificador do trabalho atribu&#xED;do pelo RENATES.</hint>
+                        <!-- <required>Tem que indicar o identificador do trabalho (TID).</required> ativar apenas quando forem implementados os TIDs -->
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>thesis</dc-schema>
+                        <dc-element>degree</dc-element>
+                        <dc-qualifier>name</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Designa&#xe7;&#xE3;o</label>
+                        <input-type>onebox</input-type>
+                        <hint>Designa&#xe7;&#xE3;o do grau associado ao trabalho, tal como apresentado na obra. (exemplo: Mestrado em Tecnologias Educativas)</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>type</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <label>Tipo</label>
+                        <input-type value-pairs-name="thesis_types">dropdown</input-type>
+                        <hint>Indique qual o tipo de trabalho.</hint>
+                        <required>&#xE9; obrigat&#xF3;rio selecionar uma tipologia do trabalho.</required>
+                    </field>
+                 <!--   <field>
+                        <dc-schema>thesis</dc-schema>
+                        <dc-element>degree</dc-element>
+                        <dc-qualifier>level</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Grau Obtido</label>
+                        <input-type>onebox</input-type>
+                        <hint>Designa&#xe7;&#xE3;o do grau obtido</hint>
+                    </field> Retirado por ser redundante com o campo da tipologia de trabalho -->
+                   <!-- Campo áreas científicas inicial <field>
+                        <dc-schema>thesis</dc-schema>
+                        <dc-element>degree</dc-element>
+                        <dc-qualifier>discipline</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>&#xC1;rea Cient&#xED;fica</label>
+                        <input-type>onebox</input-type>
+                        <hint>&#xC1;rea cient&#xED;fica associada ao trabalho</hint>
+                        
+                    </field> -->
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>subject</dc-element>
+                        <dc-qualifier>fos</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Dom&#xED;nio Cient&#xED;fico</label>
+                        <input-type>onebox</input-type>
+                        <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#xE7;&#xE3;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
+                        <vocabulary closed="false">fos</vocabulary>
+                        <required></required>
+                    </field>
+                    <!--  ** Ser&#xE1; preenchido por defeito
+           <field><dc-schema>thesis</dc-schema><dc-element>degree</dc-element><dc-qualifier>grantor</dc-qualifier><repeatable>false</repeatable><label>Institui&#xe7;&#xE3;o</label><input-type>onebox</input-type><hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint><required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
+                </page>
+                <page number="2">
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier>abstract</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Resumo</label>
+                        <input-type>textarea</input-type>
+                        <hint>Introduza em baixo o resumo (abstract) no idioma principal do trabalho. Caso tenha resumo(s) noutro(s) idioma(s) clique no bot&#xE3;o &#x22;Adicionar mais&#x22;.</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>subject</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Palavras-chave</label>
+                        <input-type>twobox</input-type>
+                        <hint>Introduza as palavras-chave ou assuntos.</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>language</dc-element>
+                        <dc-qualifier>iso</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Idioma</label>
+                        <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                        <hint>Selecione o idioma predominante do trabalho. Se o idioma n&#xE3;o aparecer listado em baixo selecione "Outro".</hint>
+                        <required>Insira o idioma do documento</required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>relation</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Projeto ou Bolsa de Financiamento</label>
+                        <input-type>onebox</input-type>
+                        <hint>Caso o trabalho tenha resultado de bolsa ou projeto(s) financiado(s) pela Comiss&#xE3;o Europeia (FP7, H2020, ERC), Funda&#xe7;&#xE3;o para a Ci&#234;ncia e Tecnologia ou Wellcome Trust, identifique esse(s) projeto(s) ou bolsa aqui. Essa identifica&#xe7;&#xE3;o &#xE9; geralmente um requisito dos financiadores.
+    Para identificar o(s) projeto(s) ou bolsa insira um dos seus elementos identificativos (n&#xFA;mero, nome, acr&#xf3;nimo ou refer&#xEA;ncia) e selecione da lista que lhe &#xE9; apresentada. D&#xfa;vidas ou mais informa&#xe7;&#xf5;es aceda &lt;a href="http://projeto.rcaap.pt/index.php/lang-pt/como-auto-arquivar-documentos/politica-fct" target="_blank"&gt;aqui&lt;/a&gt;</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>rights</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Acesso</label>
+                        <input-type value-pairs-name="common_rights">dropdown</input-type>
+                        <hint>Esta cole&#xe7;&#xE3;o &#xE9; por predefini&#xe7;&#xE3;o de Acesso Aberto, caso pretenda que este trabalho tenha outra condi&#xe7;&#xE3;o de acesso indique-a aqui.</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>date</dc-element>
+                        <dc-qualifier>embargo</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Data Final do Embargo</label>
+                        <input-type>date</input-type>
+                        <hint>Caso tenha indicado &#x22;Acesso Embargado&#x22; no campo &#x22;Acesso&#x22;, indique a data do final do embargo, a partir da qual o documento passar&#xE1; a estar dispon&#xED;vel em Acesso Aberto. Deve indicar pelo menos o ano e o m&#xEA;s.</hint>
+                    </field>
+                    <field>
+                        <dc-schema>rcaap</dc-schema>
+                        <dc-element>embargofct</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Justifica&#xe7;&#xE3;o do Prolongamento do Embargo</label>
+                        <input-type>textarea</input-type>
+                        <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
+                    </field>
+                   <field>
+                        <dc-schema>rcaap</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>authoremail</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+                        <input-type>onebox</input-type>
+                        <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se a tese for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) da tese  para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+                        <required></required>
+                    </field> 
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>rights</dc-element>
+                        <dc-qualifier>uri</dc-qualifier>
+                        <repeatable>false</repeatable>
+                        <label>Licen&#xe7;a Creative Commons</label>
+                        <input-type value-pairs-name="creative_commons">dropdown</input-type>
+                        <hint>Associe uma licen&#xe7;a &lt;a href="https://creativecommons.org/licenses/" target="_blank" &gt;Creative Commons 4.0 Internacional&lt;/a&gt; ao seu trabalho, escolhendo-a da lista apresentada. No caso de trabalhos financiados pela FCT o uso da licen&#xe7;a CC-BY &#xE9; recomendado.</hint>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier>sponsorship</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Outra(s) entidade(s) patrocinadora(s)</label>
+                        <input-type>textarea</input-type>
+                        <hint>Introduza os nomes de eventuais patrocinadores do trabalho</hint>
+                        <required></required>
+                    </field>
+                    <field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>description</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Coment&#xE1;rios</label>
+                        <input-type>textarea</input-type>
+                        <hint>Insira alguma informa&#xe7;&#xE3;o adicional se necess&#xE1;rio. </hint>
+                    </field>
+                </page>
+            </form>
+            <form name="thesisTID">
+	    	            <page number="1">
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>title</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>T&#xED;tulo</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Introduza o t&#xED;tulo da tese ou disserta&#xE7;&#xE3;o. O t&#xED;tulo n&#xE3;o deve terminar com pontua&#xe7;&#xE3;o. N&#xE3;o &#xE9; poss&#xED;vel formatar em it&#xE1;lico. Se tiver um subt&#xED;tulo coloque [ : ]. Use mai&#xFA;sculas apenas para a primeira letra e nomes pr&#xF3;prios.
+	    	         &lt;br&gt;Exemplo: &lt;b&gt;T&#xED;tulo do Trabalho : subt&#xED;tulo do trabalho&lt;/b&gt;
+	    	         </hint>
+	    	                    <required>Tem que introduzir um t&#xED;tulo principal do trabalho.</required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>title</dc-element>
+	    	                    <dc-qualifier>alternative</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Outro T&#xED;tulo</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Introduza se necess&#xE1;rio outro t&#xED;tulo associado ao trabalho.</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>contributor</dc-element>
+	    	                    <dc-qualifier>author</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Autor</label>
+	    	                    <input-type>name</input-type>
+	    	                    <hint>Introduza o nome do autor da tese ou disserta&#xe7;&#xE3;o.</hint>
+	    	                    <required>Tem que introduzir em baixo o nome do autor.</required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>contributor</dc-element>
+	    	                    <dc-qualifier>advisor</dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Orientador(es)</label>
+	    	                    <input-type>name</input-type>
+	    	                    <hint>Introduza em baixo o nome do(s) orientador(es) ou revisor(es) do trabalho.</hint>
+	    	                    <required></required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>date</dc-element>
+	    	                    <dc-qualifier>issued</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Data de Defesa</label>
+	    	                    <input-type>date</input-type>
+	    	                    <hint>Introduza a data em que o trabalho foi defendido.</hint>
+	    	                    <required>Tem que inserir pelo menos o ano.</required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>date</dc-element>
+	    	                    <dc-qualifier>submitted</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Data de submiss&#xE3;o</label>
+	    	                    <input-type>date</input-type>
+	    	                    <hint>Introduza a data em que o trabalho foi submetido para defesa.</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>identifier</dc-element>
+	    	                    <dc-qualifier>tid</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Identificador do Trabalho (TID)</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Indique o identificador do trabalho atribu&#xED;do pelo RENATES.</hint>
+	    	                    <required>Tem que indicar o identificador do trabalho (TID).</required>  
+	    	                    <!--<required></required>-->
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>thesis</dc-schema>
+	    	                    <dc-element>degree</dc-element>
+	    	                    <dc-qualifier>name</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Designa&#xe7;&#xE3;o</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Designa&#xe7;&#xE3;o do grau associado ao trabalho, tal como apresentado na obra. (exemplo: Mestrado em Tecnologias Educativas)</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>type</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <label>Tipo</label>
+	    	                    <input-type value-pairs-name="thesis_types">dropdown</input-type>
+	    	                    <hint>Indique qual o tipo de trabalho.</hint>
+	    	                    <required>&#xE9; obrigat&#xF3;rio selecionar uma tipologia do trabalho.</required>
+	    	                </field>
+	    	             <!--   <field>
+	    	                    <dc-schema>thesis</dc-schema>
+	    	                    <dc-element>degree</dc-element>
+	    	                    <dc-qualifier>level</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Grau Obtido</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Designa&#xe7;&#xE3;o do grau obtido</hint>
+	    	                </field> Retirado por ser redundante com o campo da tipologia de trabalho -->
+	    	               <!-- Campo Ã¡reas cientÃ­ficas inicial <field>
+	    	                    <dc-schema>thesis</dc-schema>
+	    	                    <dc-element>degree</dc-element>
+	    	                    <dc-qualifier>discipline</dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>&#xC1;rea Cient&#xED;fica</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>&#xC1;rea cient&#xED;fica associada ao trabalho</hint>
+	    	                    
+	    	                </field> -->
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>subject</dc-element>
+	    	                    <dc-qualifier>fos</dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Dom&#xED;nio Cient&#xED;fico</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#231;&#227;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
+	    	                    <vocabulary closed="false">fos</vocabulary>
+	    	                    <required></required>
+	    	                </field>
+	    	                <!--  ** Ser&#xE1; preenchido por defeito
+	    	       <field><dc-schema>thesis</dc-schema><dc-element>degree</dc-element><dc-qualifier>grantor</dc-qualifier><repeatable>false</repeatable><label>Institui&#xe7;&#xE3;o</label><input-type>onebox</input-type><hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint><required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
+	    	            </page>
+	    	            <page number="2">
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>description</dc-element>
+	    	                    <dc-qualifier>abstract</dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Resumo</label>
+	    	                    <input-type>textarea</input-type>
+	    	                    <hint>Introduza em baixo o resumo (abstract) no idioma principal do trabalho. Caso tenha resumo(s) noutro(s) idioma(s) clique no bot&#xE3;o &#x22;Adicionar mais&#x22;.</hint>
+	    	                    <required></required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>subject</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Palavras-chave</label>
+	    	                    <input-type>twobox</input-type>
+	    	                    <hint>Introduza as palavras-chave ou assuntos.</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>language</dc-element>
+	    	                    <dc-qualifier>iso</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Idioma</label>
+	    	                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+	    	                    <hint>Selecione o idioma predominante do trabalho. Se o idioma n&#xE3;o aparecer listado em baixo selecione "Outro".</hint>
+	    	                    <required>Insira o idioma do documento</required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>relation</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Projeto ou Bolsa de Financiamento</label>
+	    	                    <input-type>onebox</input-type>
+	    	                    <hint>Caso o trabalho tenha resultado de bolsa ou projeto(s) financiado(s) pela Comiss&#xE3;o Europeia (FP7, H2020, ERC), Funda&#xe7;&#xE3;o para a Ci&#234;ncia e Tecnologia ou Wellcome Trust, identifique esse(s) projeto(s) ou bolsa aqui. Essa identifica&#xe7;&#xE3;o &#xE9; geralmente um requisito dos financiadores.
+	    	Para identificar o(s) projeto(s) ou bolsa insira um dos seus elementos identificativos (n&#xFA;mero, nome, acr&#xf3;nimo ou refer&#xEA;ncia) e selecione da lista que lhe &#xE9; apresentada. D&#xfa;vidas ou mais informa&#xe7;&#xf5;es aceda &lt;a href="http://projeto.rcaap.pt/index.php/lang-pt/como-auto-arquivar-documentos/politica-fct" target="_blank"&gt;aqui&lt;/a&gt;</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>rights</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Acesso</label>
+	    	                    <input-type value-pairs-name="common_rights">dropdown</input-type>
+	    	                    <hint>Esta cole&#xe7;&#xE3;o &#xE9; por predefini&#xe7;&#xE3;o de Acesso Aberto, caso pretenda que este trabalho tenha outra condi&#xe7;&#xE3;o de acesso indique-a aqui.</hint>
+	    	                    <required></required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>date</dc-element>
+	    	                    <dc-qualifier>embargo</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Data Final do Embargo</label>
+	    	                    <input-type>date</input-type>
+	    	                    <hint>Caso tenha indicado &#x22;Acesso Embargado&#x22; no campo &#x22;Acesso&#x22;, indique a data do final do embargo, a partir da qual o documento passar&#xE1; a estar dispon&#xED;vel em Acesso Aberto. Deve indicar pelo menos o ano e o m&#234;s.</hint>
+	    	                </field>
+	    	                <field>
+	    	                        <dc-schema>rcaap</dc-schema>
+	    	                        <dc-element>embargofct</dc-element>
+	    	                        <dc-qualifier></dc-qualifier>
+	    	                        <repeatable>false</repeatable>
+	    	                        <label>Justifica&#xe7;&#xE3;o do Prolongamento do Embargo</label>
+	    	                        <input-type>textarea</input-type>
+	    	                        <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
+	    	                    </field>
+	    						<field>
+	    	                        <dc-schema>rcaap</dc-schema>
+	    	                        <dc-element>contributor</dc-element>
+	    	                        <dc-qualifier>authoremail</dc-qualifier>
+	    	                        <repeatable>false</repeatable>
+	    	                        <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+	    	                        <input-type>onebox</input-type>
+	    	                        <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se a tese for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) da tese  para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+	    	                        <required></required>
+	    	                    </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>rights</dc-element>
+	    	                    <dc-qualifier>uri</dc-qualifier>
+	    	                    <repeatable>false</repeatable>
+	    	                    <label>Licen&#xe7;a Creative Commons</label>
+	    	                    <input-type value-pairs-name="creative_commons">dropdown</input-type>
+	    	                    <hint>Associe uma licen&#xe7;a Creative Commons 4.0 Internacional ao seu trabalho, escolhendo-a da lista apresentada. No caso de trabalhos financiados pela FCT o uso da licen&#xe7;a CC-BY &#xE9; recomendado. Saiba mais &lt;a href="http://projeto.rcaap.pt/index.php/lang-pt/como-auto-arquivar-documentos/politica-fct" target="_blank" &gt;aqui&lt;/a&gt;</hint>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>description</dc-element>
+	    	                    <dc-qualifier>sponsorship</dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Outra(s) entidade(s) patrocinadora(s)</label>
+	    	                    <input-type>textarea</input-type>
+	    	                    <hint>Introduza os nomes de eventuais patrocinadores do trabalho</hint>
+	    	                    <required></required>
+	    	                </field>
+	    	                <field>
+	    	                    <dc-schema>dc</dc-schema>
+	    	                    <dc-element>description</dc-element>
+	    	                    <dc-qualifier></dc-qualifier>
+	    	                    <repeatable>true</repeatable>
+	    	                    <label>Coment&#xE1;rios</label>
+	    	                    <input-type>textarea</input-type>
+	    	                    <hint>Insira alguma informa&#xe7;&#xE3;o adicional se necess&#xE1;rio. </hint>
+	    	                </field>
+	    	            </page>
+        </form>
+        <form name="ddi">
+         <page number="1">
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>title</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>T&#xED;tulo</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza o t&#xED;tulo do Estudo</hint>
+               <required>Tem que introduzir um t&#xED;tulo principal do registo.</required>
+            </field>
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>title</dc-element>
+               <dc-qualifier>alternative</dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Sub-t&#xED;tutlo</label>
+               <input-type>onebox</input-type>
+               <hint>Se o registo tiver um t&#xED;tulo alternativo, subt&#xED;tulo ou t&#xED;tulo em ingl&#234;s, insira-o em baixo.</hint>
+               <required></required>
+            </field>
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>identifier</dc-element>
+               <dc-qualifier>citation</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Cita&#xe7;&#xE3;o Bibliogr&#xE1;fica</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza a cita&#xe7;&#xE3;o para a publica&#xe7;&#xE3;o anterior deste item.</hint>
+               <required></required>
+            </field>
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>creator</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Investigador / Institui&#xe7;&#xE3;o Respons&#xE1;vel</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza o nome do Investigador ou Institui&#xe7;&#xE3;o respons&#xE1;vel pelos dados (Authority Entity / Primary Investigator)</hint>
+               <required></required>
+            </field>
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>subject</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <!-- An input-type of twobox MUST be marked as repeatable -->
+               <repeatable>true</repeatable>
+               <label>Palavras Chave</label>
+               <input-type>twobox</input-type>
+               <hint>Introduza as palavras chave ou frases do assunto.</hint>
+               <required></required>
+               <vocabulary>srsc</vocabulary>
+            </field>
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>description</dc-element>
+               <dc-qualifier>abstract</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Resumo / Abstract</label>
+               <input-type>textarea</input-type>
+               <hint> Introduza em baixo o resumo (abstract) no idioma principal. </hint>
+               <required></required>
+            </field> 
+         
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>coverage</dc-element>
+               <dc-qualifier>temporal</dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Per&#xED;odo de Tempo Coberto pelos Dados</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza o per&#xED;odo temporal do trabalho</hint>
+               <required></required>
+            </field> 
+         
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>coverage</dc-element>
+               <dc-qualifier>spatial</dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Pa&#xED;s ou Âmbito Geogr&#xE1;fico</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza a abrang&#234;ncia geogr&#xE1;fica dos dados recolhidos</hint>
+               <required></required>
+            </field> 
+       
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>coverage</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Unidade Geogr&#xE1;fica, Unidade de An&#xE1;lise e Universo</label>
+               <input-type>onebox</input-type>
+               <hint>Rever esta informa&#xe7;&#xE3;o!!!!!!!!!!</hint>
+               <required></required>
+            </field> 
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>date</dc-element>
+               <dc-qualifier>issued</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Data</label>
+               <input-type>date</input-type>
+               <hint>Forne&#xe7;a a data da publica&#xe7;&#xE3;o ou distribui&#xe7;&#xE3;o p&#xfa;blica. Pode deixar o m&#234;s e/ou o dia em branco se n&#xE3;o se aplicar.</hint>
+               <required>Tem que inserir pelo menos o ano.</required>
+            </field>
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>type</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Tipo de Dados</label>
+               <input-type value-pairs-name="ddi_types">dropdown</input-type>
+               <hint>Seleccione o tipo do conte&#xfa;do que est&#xE1; a depositar. Para seleccionar mais do que um valor da lista, pressione a tecla &#x22;CTRL&#x22; ou &#x22;Shift&#x22;. 
+Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hint>
+               <required></required>
+            </field>
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>publisher</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Entidade Respons&#xE1;vel pela Aplica&#xe7;&#xE3;o do Question&#xE1;rio</label>
+               <input-type>onebox</input-type>
+               <hint>Introduza o nome da entidade Respons&#xE1;vel pela aplica&#xe7;&#xE3;o do question&#xE1;rio.</hint>
+               <required></required>
+            </field>
+     
+     
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>contributor</dc-element>
+               <dc-qualifier>author</dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>Autores</label>
+               <input-type>name</input-type>
+               <hint>Introduza os nomes dos autores."titl"</hint>
+               <required></required>
+            </field>
+
+       
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>relation</dc-element>
+               <dc-qualifier>ispartofseries</dc-qualifier>
+               <repeatable>true</repeatable>
+               <label>S&#xE9;rie/N&#xfa;mero</label>
+               <input-type>series</input-type>
+               <hint>Introduza o nome da s&#xE9;rie e n&#xfa;mero atribu&#xED;do ao item pela sua comunidade.</hint>
+               <required></required>
+            </field>
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>identifier</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+               <repeatable>true</repeatable>
+               <label>Identificadores</label>
+               <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+               <hint>Se este registo tiver algum identificador associado , insira em baixo.</hint>
+               <required></required>
+            </field>
+      
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>relation</dc-element>
+               <dc-qualifier>publisherversion</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Vers&#xE3;o do Editor</label>
+               <input-type>onebox</input-type>
+               <hint>Insira o link para a vers&#xE3;o do editor.</hint>
+               <required></required>
+            </field>
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>peerreviewed</dc-element>
+        <label>Revis&#xE3;o por Pares (peer-review)</label>
+                <input-type value-pairs-name="yes_no">list</input-type> 
+        <hint>Indicar caso tenha sido revisto pelos pares</hint>
+        <required></required>
+            </field>
+
+    
+
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>language</dc-element>
+               <dc-qualifier>iso</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>L&#xED;ngua</label>
+               <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+               <hint>Seleccione a l&#xED;ngua do conte&#xfa;do principal do item. Se a l&#xED;ngua n&#xE3;o aparecer na lista em baixo seleccione &#x22;Outra&#x22; . Se ao conte&#xfa;do n&#xE3;o se aplicar uma l&#xED;ngua (por exemplo, se for uma imagem) seleccione &#x22;N/A&#x22;.</hint>
+               <required></required>
+            </field>
+     
+
+         </page>
+
+         <page number="2">
+       
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>description</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Notas</label>
+               <input-type>textarea</input-type>
+               <hint> Descri&#xe7;&#xE3;o adicional e coment&#xE1;rios. </hint>
+               <required></required>
+            </field>
+       
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>rights</dc-element>
+               <dc-qualifier></dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Acesso</label>
+               <input-type value-pairs-name="common_rights">dropdown</input-type>
+               <hint>Esta colec&#xe7;&#xE3;o &#xE9; de acesso livre, caso pretenda que este artigo tenha outra condi&#xe7;&#xE3;o de acesso indique-a aqui.</hint>
+               <required></required>
+            </field>
+       
+       
+       
+
+            <field>
+               <dc-schema>dc</dc-schema>
+               <dc-element>description</dc-element>
+               <dc-qualifier>sponsorship</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Patrocinadores</label>
+               <input-type>textarea</input-type>
+               <hint> Introduza os nomes de eventuais patrocinadores na caixa em baixo. </hint>
+               <required></required>
+            </field>
+
+      
+         </page>
+      </form>
+        </form-definitions>
+        <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
+        <!-- The form-value-pairs element holds child elements named 'value-pairs' -->
+        <!-- A 'value-pairs' element has a value-pairs-name and a dc-term          -->
+        <!-- attribute. The dc-term attribute specifies which to which Dublin Core -->
+        <!-- Term this set of value-pairs applies.                                 -->
+        <!--     Current dc-terms are: identifier-pairs, type-pairs, and           -->
+        <!--     language_iso-pairs. The name attribute matches a name             -->
+        <!--     in the form-map, above.                                           -->
+        <!-- A value-pair contains one 'pair' for each value displayed in the list -->
+        <!-- Each pair contains a 'displayed-value' element and a 'stored-value'   -->
+        <!-- element. A UI list displays the displayed-values, but the program     -->
+        <!-- stores the associated stored-values in the database.                  -->
+        <form-value-pairs>
+            <value-pairs value-pairs-name="creative_commons" dc-term="rights">
+
+            	<!-- Baseado em: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_licensecondition.html#dc-rightslicensecondition -->
+
+            <pair>
+               <displayed-value>Sem Licen&#xe7;a</displayed-value>
+               <stored-value></stored-value>
+             </pair>
+             <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o (CC-BY)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by/4.0/</stored-value>
+             </pair>
+             <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o, Sem Trabalhos Derivados (CC-BY-ND)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by-nd/4.0/</stored-value>
+             </pair>
+             <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o, Partilha nos Termos da Mesma Licen&#xe7;a (CC-BY-SA)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by-sa/4.0/</stored-value>
+             </pair>
+                  <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o, Uso N&#xE3;o Comercial (CC-BY-NC)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by-nc/4.0/</stored-value>
+             </pair>
+                  <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o, N&#xE3;o Comercial, Sem Deriva&#xe7;&#xF5;es (CC-BY-NC-ND)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by-nc-nd/4.0/</stored-value>
+             </pair>
+                  <pair>
+               <displayed-value>Atribui&#xe7;&#xE3;o, Uso N&#xE3;o Comercial, Partilha nos Termos da Mesma Licen&#xe7;a (CC-BY-NC-SA)</displayed-value>
+               <stored-value>http://creativecommons.org/licenses/by-nc-sa/4.0/</stored-value>
+             </pair>
+           </value-pairs>
+            <value-pairs value-pairs-name="thesis_types" dc-term="type">
+                <pair>
+                    <displayed-value>Disserta&#xe7;&#xE3;o de Mestrado</displayed-value>
+                    <stored-value>masterThesis</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Tese de Doutoramento</displayed-value>
+                    <stored-value>doctoralThesis</stored-value>
+                </pair>
+            </value-pairs>
+
+            <value-pairs value-pairs-name="yes_no" dc-term="peerreviewed">
+                <pair>
+                    <displayed-value>Sim</displayed-value>
+                    <stored-value>yes</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>N&#xE3;o</displayed-value>
+                    <stored-value>no</stored-value>
+                </pair>
+            </value-pairs>
+            <value-pairs value-pairs-name="common_rights" dc-term="rights">
+
+            	<!-- Com base em: http://vocabularies.coar-repositories.org/documentation/access_rights/ 
+            	e http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_accessrights.html#dc-rightsaccessrights
+				
+				Usar URI ou texto ? http://purl.org/coar/access_right/c_abf2 
+
+
+            -->
+
+                <pair>
+                    <displayed-value>Acesso Abert (open access)</displayed-value>
+                    <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Acesso Restrito (restricted access)</displayed-value>
+                    <stored-value>http://purl.org/coar/access_right/c_16ec</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Acesso Embargado (embargoed access)</displayed-value>
+                    <stored-value>http://purl.org/coar/access_right/c_f1cf</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Apenas Metadados (metadata only access)</displayed-value>
+                    <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
+                </pair>
+            </value-pairs>
+            <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
+                <!--<pair>
+                    <displayed-value>DOI</displayed-value>
+                    <stored-value>doi</stored-value>
+                </pair>-->
+                <pair>
+                    <displayed-value>ISSN</displayed-value>
+                    <stored-value>issn</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Outro</displayed-value>
+                    <stored-value>other</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISMN</displayed-value>
+                    <stored-value>ismn</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Documento Governamental</displayed-value>
+                    <stored-value>govdoc</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>URI</displayed-value>
+                    <stored-value>uri</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISBN</displayed-value>
+                    <stored-value>isbn</stored-value>
+                </pair>
+            </value-pairs>
+
+
+
+
+            <value-pairs value-pairs-name="common_types" dc-term="type">
+            
+
+<!-- Seleccionar apenas alguns para fazer o mapeamento DRIVER Types VS COAR Types 
+	
+	http://vocabularies.coar-repositories.org/documentation/resource_types/ 
+
+
+DRIVER / OPENAIRE Types
+
+<value-pairs value-pairs-name="common_types" dc-term="type">
+                <pair>
+                    <displayed-value>Artigo</displayed-value>
+                    <stored-value>article</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Disserta&#xe7;&#xE3;o de Licenciatura</displayed-value>
+                    <stored-value>bachelorThesis</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Disserta&#xe7;&#xE3;o de Mestrado</displayed-value>
+                    <stored-value>masterThesis</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Tese de Doutoramento</displayed-value>
+                    <stored-value>doctoralThesis</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Livro</displayed-value>
+                    <stored-value>book</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Parte ou cap&#xED;tulo de livro</displayed-value>
+                    <stored-value>bookPart</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Recens&#xE3;o</displayed-value>
+                    <stored-value>review</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Documento de Confer&#xea;ncia</displayed-value>
+                    <stored-value>conferenceObject</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Palestra</displayed-value>
+                    <stored-value>lecture</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Working Paper</displayed-value>
+                    <stored-value>workingPaper</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Preprint</displayed-value>
+                    <stored-value>preprint</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Relat&#xF3;rio</displayed-value>
+                    <stored-value>report</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Anota&#xe7;&#xE3;o</displayed-value>
+                    <stored-value>annotation</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Texto de Peri&#xF3;dico</displayed-value>
+                    <stored-value>contributionToPeriodical</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Patente</displayed-value>
+                    <stored-value>patent</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Outro</displayed-value>
+                    <stored-value>other</stored-value>
+                </pair>
+                <pair>
+		    <displayed-value>Dataset</displayed-value>
+		    <stored-value>dataset</stored-value>
+                </pair>
+            </value-pairs>
+
+-->
+
+
+
+
+                <pair>
+    				<displayed-value>Texto (text)</displayed-value>
+    				<stored-value>http://purl.org/coar/resource_type/c_18cf</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Anotação (text::annotation)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_1162</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Publicação Periódica (text::periodical)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_2659</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Revista (text::periodical::journal)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_0640</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Contributo em Revista (text::periodical::journal::contribution to journal)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_3e5a</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>text::periodical::journal::contribution to journal::journal article</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_6501</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>text::periodical::journal::contribution to journal::journal article::review artice</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_dcae04bc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Artigo (text::periodical::journal::contribution to journal::journal article::research article)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_2df8fbb1</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Editorial (text::periodical::journal::contribution to journal::editorial)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_b239</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Artigo de Dados (text::periodical::journal::contribution to journal::data paper)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_beb9</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Carta ao Editor (text::periodical::journal::contribution to journal::letter to the editor)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_545b</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Bibliografia (text::bibliography)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_86bc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Livro (text::book)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_2f33</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Capítulo de Livro (text::book::book part)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_3248</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Recensão (text::review)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_efa0</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Recensão de Livro (text::review::book review)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_ba08</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Documento de Conferência (text::conference object)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_c94f</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Atas de Conferência (text::conference object::conference proceedings)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_f744</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Comunicação em Conferência (text::conference object::conference proceedings::conference paper)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_5794</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Poster em Conferência (text::conference object::conference proceedings::conference poster)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_6670</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Comunicação não publicada nas atas da conferência )text::conference object::conference paper not in proceedings)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18cp</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Poster não publicado nas atas da conferência (text::conference object::conference poster not in proceedings)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18co</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Palestra (text::lecture)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_8544</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Carta (text::letter)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_0857</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Patente (text::patent)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_15cd</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Preprint (text::preprint)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_816b</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório (text::report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_93fc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Capítulo de Relatório (text::report::report part)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_ba1f</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório Interno (text::report::internal report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18ww</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Memorando (text::report::memorandum)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18wz</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Outro Relatório (text::report::other type of report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18wq</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório de Política (text::report::policy report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_186u</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Entregável de Projeto (text::report::project deliverable)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18op</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório para Organismo Financiador (text::report::report to funding agency)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18hj</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório de Investigação (text::report::research report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18ws</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Relatório Técnico (text::report::technical report)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18gh</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Proposta de Investigação (text::research proposal)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_baaf</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Documentação Técnica (text::technical documentation)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_71bd</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Working Paper (text::working paper)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_8042</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Tese (text::thesis)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_46ec</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Trabalho de Fim de Curso (text::thesis::bachelor thesis)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_7a1f</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Tese de Doutoramento (text::thesis::doctoral thesis)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_db06</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Dissertação de Mestrado (text::thesis::master thesis)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_bdcc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Notação Musical (text::musical notation)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18cw</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Imagem (image)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_c513</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Imagem Animada (image::moving image)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_8a7e</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Vídeo (image::moving image::video)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_12ce</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Imagem Estática (image::still image)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_ecc8</stored-value>
+				</pair>
+
+				<pair>
+					<displayed-value>Software (software)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_5ce6</stored-value>
+				</pair>
+
+				<pair>
+					<displayed-value>Material Cartográfico (cartographic material)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_12cc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Mapa (cartographic material::map)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_12cd</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Recurso Interativo (interactive resource)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_e9a0</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Website (interactive resource::website)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_7ad9</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Som (sound)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18cc</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Composição Musical (sound::musical composition)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_18cd</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Workflow (workflow)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_393c</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Outro (other)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_1843</stored-value>
+				</pair>
+				<pair>
+					<displayed-value>Conjunto de Dados de Investigação (dataset)</displayed-value>
+					<stored-value>http://purl.org/coar/resource_type/c_ddb1</stored-value>
+				</pair>
+            </value-pairs>
+            <!-- default language order: (from dspace 1.2.1)
+            "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
+         -->
+            <value-pairs value-pairs-name="common_iso_languages" dc-term="language_iso">
+                <pair>
+		    <displayed-value>Selecione o idioma</displayed-value>
+		    <stored-value></stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Portugu&#xea;s</displayed-value>
+                    <stored-value>por</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Ingl&#xea;s</displayed-value>
+                    <stored-value>eng</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Espanhol</displayed-value>
+                    <stored-value>spa</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Alem&#xE3;o</displayed-value>
+                    <stored-value>deu</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Franc&#xea;s</displayed-value>
+                    <stored-value>fra</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Italiano</displayed-value>
+                    <stored-value>ita</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Mirand&#xea;s</displayed-value>
+                    <stored-value>mwl</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Japon&#xea;s</displayed-value>
+                    <stored-value>jpn</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Chin&#xea;s</displayed-value>
+                    <stored-value>cmn</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Outro</displayed-value>
+                    <stored-value>other</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>N/A</displayed-value>
+                    <stored-value>N/A</stored-value>
+                </pair>
+            </value-pairs>
+            
+             <value-pairs value-pairs-name="dc_publicationstatus" name="publication_version">
+
+<!-- Baseado em: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_publicationversion.html#aire-version 
+	
+	# Rever Stored value, colocar apenas a sigla?)
+
+-->
+
+		<pair>
+		    	<displayed-value>Selecione o estado</displayed-value>
+		     	<stored-value></stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Not Applicable (or Unknown)</displayed-value>
+			<stored-value>NA (Not Applicable (or Unknown))</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Author's Original</displayed-value>
+			<stored-value>AO (Author's Original)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Submitted Manuscript Under Review</displayed-value>
+			<stored-value>SMUR (Submitted Manuscript Under Review)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Accepted Manuscript</displayed-value>
+			<stored-value>AM (Accepted Manuscript)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Proof</displayed-value>
+			<stored-value>P (Proof)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Version of Record</displayed-value>
+			<stored-value>VoR (Version of Record)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Corrected Version of Record</displayed-value>
+			<stored-value>CVoR (Corrected Version of Record)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Enhanced Version of Record</displayed-value>
+			<stored-value>EVoR (Enhanced Version of Record)</stored-value>
+		</pair>
+		<pair>
+			<displayed-value>Version of Record</displayed-value>
+			<stored-value>VoR (Version of Record)</stored-value>
+		</pair>
+	</value-pairs>
+    <value-pairs value-pairs-name="ddi_types" dc-term="type">
+     <pair>
+       <displayed-value>Inqu&#xE9;rito</displayed-value>
+       <stored-value>inquerito</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Question&#xE1;rio</displayed-value>
+       <stored-value>questionario</stored-value>
+     </pair>     
+     <pair>
+       <displayed-value>Base de Dados</displayed-value>
+       <stored-value>basededados</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Relat&#xF3;rio Metodol&#xF3;gico</displayed-value>
+       <stored-value>relatoriometodologico</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Metadados</displayed-value>
+       <stored-value>metadados</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Dados XML</displayed-value>
+       <stored-value>dadosxml</stored-value>
+     </pair>
+     <pair>
+       <displayed-value>Outro</displayed-value>
+       <stored-value>outro</stored-value>
+     </pair>
+   </value-pairs>
+        </form-value-pairs>
+</input-forms>
