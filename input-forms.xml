@@ -1655,35 +1655,6 @@ DRIVER / OPENAIRE Types
 			<stored-value>VoR (Version of Record)</stored-value>
 		</pair>
 	</value-pairs>
-    <value-pairs value-pairs-name="ddi_types" dc-term="type">
-     <pair>
-       <displayed-value>Inqu&#xE9;rito</displayed-value>
-       <stored-value>inquerito</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Question&#xE1;rio</displayed-value>
-       <stored-value>questionario</stored-value>
-     </pair>     
-     <pair>
-       <displayed-value>Base de Dados</displayed-value>
-       <stored-value>basededados</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Relat&#xF3;rio Metodol&#xF3;gico</displayed-value>
-       <stored-value>relatoriometodologico</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Metadados</displayed-value>
-       <stored-value>metadados</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Dados XML</displayed-value>
-       <stored-value>dadosxml</stored-value>
-     </pair>
-     <pair>
-       <displayed-value>Outro</displayed-value>
-       <stored-value>outro</stored-value>
-     </pair>
-   </value-pairs>
+    
         </form-value-pairs>
 </input-forms>
