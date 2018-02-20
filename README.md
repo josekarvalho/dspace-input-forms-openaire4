@@ -7,8 +7,8 @@ http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/
 
 This XML file has the following structure:
 
-- Default submission form
-- Thesis submission form
+- Default submission form (<form name="traditional">)
+- Thesis submission form (<form name="thesis">)
 
 At the end of the document, there are reused lists of:
 - Document Types (based on COAR)
