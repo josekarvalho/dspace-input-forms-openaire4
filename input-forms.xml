@@ -1610,7 +1610,8 @@ DRIVER / OPENAIRE Types
 
 <!-- Baseado em: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_publicationversion.html#aire-version 
 	
-	# Rever Stored value, colocar apenas a sigla?)
+	# Translate
+	# Define if Not Applicable or Unknow will be filled or not)
 
 -->
 
@@ -1620,39 +1621,35 @@ DRIVER / OPENAIRE Types
 		</pair>
 		<pair>
 			<displayed-value>Not Applicable (or Unknown)</displayed-value>
-			<stored-value>NA (Not Applicable (or Unknown))</stored-value>
+			<stored-value>NA</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Author's Original</displayed-value>
-			<stored-value>AO (Author's Original)</stored-value>
+			<stored-value>AO</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Submitted Manuscript Under Review</displayed-value>
-			<stored-value>SMUR (Submitted Manuscript Under Review)</stored-value>
+			<stored-value>SMUR</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Accepted Manuscript</displayed-value>
-			<stored-value>AM (Accepted Manuscript)</stored-value>
+			<stored-value>AM</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Proof</displayed-value>
-			<stored-value>P (Proof)</stored-value>
+			<stored-value>P</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Version of Record</displayed-value>
-			<stored-value>VoR (Version of Record)</stored-value>
+			<stored-value>VoR</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Corrected Version of Record</displayed-value>
-			<stored-value>CVoR (Corrected Version of Record)</stored-value>
+			<stored-value>CVoR</stored-value>
 		</pair>
 		<pair>
 			<displayed-value>Enhanced Version of Record</displayed-value>
-			<stored-value>EVoR (Enhanced Version of Record)</stored-value>
-		</pair>
-		<pair>
-			<displayed-value>Version of Record</displayed-value>
-			<stored-value>VoR (Version of Record)</stored-value>
+			<stored-value>EVoR</stored-value>
 		</pair>
 	</value-pairs>
     
