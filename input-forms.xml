@@ -1179,21 +1179,24 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
 
 
             -->
-
+		<pair>
+                    <displayed-value>Select Value</displayed-value>
+                    <stored-value></stored-value>
+                </pair>
                 <pair>
-                    <displayed-value>Acesso Aberto (open access)</displayed-value>
+                    <displayed-value>Acesso Aberto</displayed-value>
                     <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
                 </pair>
                 <pair>
-                    <displayed-value>Acesso Restrito (restricted access)</displayed-value>
+                    <displayed-value>Acesso Restrito</displayed-value>
                     <stored-value>http://purl.org/coar/access_right/c_16ec</stored-value>
                 </pair>
                 <pair>
-                    <displayed-value>Acesso Embargado (embargoed access)</displayed-value>
+                    <displayed-value>Acesso Embargado</displayed-value>
                     <stored-value>http://purl.org/coar/access_right/c_f1cf</stored-value>
                 </pair>
                 <pair>
-                    <displayed-value>Apenas Metadados (metadata only access)</displayed-value>
+                    <displayed-value>Apenas Metadados</displayed-value>
                     <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
                 </pair>
             </value-pairs>
