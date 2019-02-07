@@ -1,8 +1,8 @@
 # Dspace Input-forms for Openaire Guidelines 4.0
-Input Forms for DSpace Repository Software to comply with OpenAIRE Publications Guidelines 4.0 considering the repository hosting service from RCAAP Project.
+Input Forms for DSpace Repository Software to comply with OpenAIRE Publications Guidelines 4.0 considering the repository hosting service from RCAAP Project with DSpace 5.x.
 
-The draft of OpenAIRE Guidelines 4.0 is here:
-http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/index.html 
+The OpenAIRE Guidelines 4.0 are here:
+https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/index.html
 
 
 This XML file has the following structure:
