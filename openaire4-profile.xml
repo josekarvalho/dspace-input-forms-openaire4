@@ -1,0 +1,66 @@
+<dspace-dc-types>
+
+  <dspace-header>
+    <title>DSpace Submission OpenAIRE 4.0 Profile Registry</title>
+    <contributor.author>José Carvalho</contributor.author>
+	  <contributor.author>Paulo Graça</contributor.author>
+	  <contributor.author>Fernando Ribeiro</contributor.author>
+  </dspace-header>
+
+  <dc-schema>
+      <name>oaire</name>
+      <namespace>http://namespace.openaire.eu/schema/oaire</namespace>
+  </dc-schema>
+
+<!-- Degóis to OpenAIRE 4 mapping-->
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationStartPage</element>
+    <qualifier></qualifier>
+	<scope_note>The  start page of the work published.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationEndPage</element>
+    <qualifier></qualifier>
+	<scope_note>The end page of the work published.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationIssue</element>
+	<scope_note>The issue of the journal.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationConferencePlace</element>
+    <qualifier></qualifier>
+	<scope_note>The place where the conference took place.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationVolume</element>
+	<scope_note>The volume, typically a number, of the journal.</scope_note>
+  </dc-type>
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>citationTitle</element>
+	<scope_note>The title name of the journal, book, conference where this work is published.</scope_note>
+  </dc-type>
+
+
+<!--
+
+  <dc-type>
+	<schema>oaire</schema>
+    <element>id</element>
+    <qualifier>other</qualifier>
+	<scope_note>Other author identifier</scope_note>
+</dc-type> -->
+
+</dspace-dc-types>
