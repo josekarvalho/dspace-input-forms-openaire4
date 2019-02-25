@@ -201,7 +201,7 @@
                         <required></required>
                     </field>
 
-                    <field><!-- NOOK oaire:? -->
+                  <!--  <field>  NOOK oaire:?
                         <dc-schema>dc</dc-schema>
                         <dc-element>identifier</dc-element>
                         <dc-qualifier>citation</dc-qualifier>
@@ -210,7 +210,7 @@
                         <input-type>onebox</input-type>
                         <hint>Introduza a refer&#234;ncia bibliogr&#xE1;fica (cita&#xe7;&#xE3;o) deste artigo.</hint>
                         <required></required>
-                    </field>
+                    </field> -->
 
                    <!-- <field>
                         <dc-schema>dc</dc-schema>
