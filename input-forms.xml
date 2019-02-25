@@ -564,7 +564,7 @@
             <!-- ############################################################### -->
 
 
-            <form name="thesis">
+      <!--      <form name="thesis">
                 <page number="1">
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -634,9 +634,10 @@
                         <label>Identificador do Trabalho (TID)</label>
                         <input-type>onebox</input-type>
                         <hint>Indique o identificador do trabalho atribu&#xED;do pelo RENATES.</hint>
-                        <!-- <required>Tem que indicar o identificador do trabalho (TID).</required> ativar apenas quando forem implementados os TIDs -->
+                        <required>Tem que indicar o identificador do trabalho (TID).</required> ativar apenas quando forem implementados os TIDs
                         <required></required>
                     </field>
+
                     <field>
                         <dc-schema>thesis</dc-schema>
                         <dc-element>degree</dc-element>
@@ -654,7 +655,7 @@
                         <input-type value-pairs-name="thesis_types">dropdown</input-type>
                         <hint>Indique qual o tipo de trabalho.</hint>
                         <required>&#xE9; obrigat&#xF3;rio selecionar uma tipologia do trabalho.</required>
-                    </field>
+                    </field> -->
                  <!--   <field>
                         <dc-schema>thesis</dc-schema>
                         <dc-element>degree</dc-element>
@@ -664,6 +665,7 @@
                         <input-type>onebox</input-type>
                         <hint>Designa&#xe7;&#xE3;o do grau obtido</hint>
                     </field> Retirado por ser redundante com o campo da tipologia de trabalho -->
+
                    <!-- Campo áreas científicas inicial <field>
                         <dc-schema>thesis</dc-schema>
                         <dc-element>degree</dc-element>
@@ -674,7 +676,9 @@
                         <hint>&#xC1;rea cient&#xED;fica associada ao trabalho</hint>
 
                     </field> -->
-                    <field>
+
+
+                  <!--  <field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>subject</dc-element>
                         <dc-qualifier>fos</dc-qualifier>
@@ -684,10 +688,10 @@
                         <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#xE7;&#xE3;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
                         <vocabulary closed="false">fos</vocabulary>
                         <required></required>
-                    </field>
+                    </field> -->
                     <!--  ** Ser&#xE1; preenchido por defeito
            <field><dc-schema>thesis</dc-schema><dc-element>degree</dc-element><dc-qualifier>grantor</dc-qualifier><repeatable>false</repeatable><label>Institui&#xe7;&#xE3;o</label><input-type>onebox</input-type><hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint><required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
-                </page>
+          <!--      </page>
                 <page number="2">
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -795,8 +799,10 @@
                         <hint>Insira alguma informa&#xe7;&#xE3;o adicional se necess&#xE1;rio. </hint>
                     </field>
                 </page>
-            </form>
-            <form name="thesisTID">
+            </form> -->
+
+
+            <!-- <form name="thesisTID">
 	    	            <page number="1">
 	    	                <field>
 	    	                    <dc-schema>dc</dc-schema>
@@ -866,9 +872,9 @@
 	    	                    <label>Identificador do Trabalho (TID)</label>
 	    	                    <input-type>onebox</input-type>
 	    	                    <hint>Indique o identificador do trabalho atribu&#xED;do pelo RENATES.</hint>
-	    	                    <required>Tem que indicar o identificador do trabalho (TID).</required>
+	    	                    <required>Tem que indicar o identificador do trabalho (TID).</required> -->
 	    	                    <!--<required></required>-->
-	    	                </field>
+	    	           <!--     </field>
 	    	                <field>
 	    	                    <dc-schema>thesis</dc-schema>
 	    	                    <dc-element>degree</dc-element>
@@ -886,8 +892,9 @@
 	    	                    <input-type value-pairs-name="thesis_types">dropdown</input-type>
 	    	                    <hint>Indique qual o tipo de trabalho.</hint>
 	    	                    <required>&#xE9; obrigat&#xF3;rio selecionar uma tipologia do trabalho.</required>
-	    	                </field>
-	    	             <!--   <field>
+	    	                </field> -->
+
+                     <!--   <field>
 	    	                    <dc-schema>thesis</dc-schema>
 	    	                    <dc-element>degree</dc-element>
 	    	                    <dc-qualifier>level</dc-qualifier>
@@ -896,7 +903,8 @@
 	    	                    <input-type>onebox</input-type>
 	    	                    <hint>Designa&#xe7;&#xE3;o do grau obtido</hint>
 	    	                </field> Retirado por ser redundante com o campo da tipologia de trabalho -->
-	    	               <!-- Campo Ã¡reas cientÃ­ficas inicial <field>
+
+                       <!-- Campo Ã¡reas cientÃ­ficas inicial <field>
 	    	                    <dc-schema>thesis</dc-schema>
 	    	                    <dc-element>degree</dc-element>
 	    	                    <dc-qualifier>discipline</dc-qualifier>
@@ -906,7 +914,7 @@
 	    	                    <hint>&#xC1;rea cient&#xED;fica associada ao trabalho</hint>
 
 	    	                </field> -->
-	    	                <field>
+	    	              <!--  <field>
 	    	                    <dc-schema>dc</dc-schema>
 	    	                    <dc-element>subject</dc-element>
 	    	                    <dc-qualifier>fos</dc-qualifier>
@@ -916,10 +924,18 @@
 	    	                    <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#231;&#227;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
 	    	                    <vocabulary closed="false">fos</vocabulary>
 	    	                    <required></required>
-	    	                </field>
+	    	                </field> -->
 	    	                <!--  ** Ser&#xE1; preenchido por defeito
-	    	       <field><dc-schema>thesis</dc-schema><dc-element>degree</dc-element><dc-qualifier>grantor</dc-qualifier><repeatable>false</repeatable><label>Institui&#xe7;&#xE3;o</label><input-type>onebox</input-type><hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint><required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
-	    	            </page>
+	    	       <field>
+               <dc-schema>thesis</dc-schema>
+               <dc-element>degree</dc-element>
+               <dc-qualifier>grantor</dc-qualifier>
+               <repeatable>false</repeatable>
+               <label>Institui&#xe7;&#xE3;o</label>
+               <input-type>onebox</input-type>
+               <hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint>
+               <required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
+	    	        <!--    </page>
 	    	            <page number="2">
 	    	                <field>
 	    	                    <dc-schema>dc</dc-schema>
@@ -1027,8 +1043,9 @@
 	    	                    <hint>Insira alguma informa&#xe7;&#xE3;o adicional se necess&#xE1;rio. </hint>
 	    	                </field>
 	    	            </page>
-        </form>
-        <form name="ddi">
+        </form>  -->
+
+        <!-- <form name="ddi">
          <page number="1">
 
             <field>
@@ -1078,9 +1095,9 @@
             <field>
                <dc-schema>dc</dc-schema>
                <dc-element>subject</dc-element>
-               <dc-qualifier></dc-qualifier>
+               <dc-qualifier></dc-qualifier> -->
                <!-- An input-type of twobox MUST be marked as repeatable -->
-               <repeatable>true</repeatable>
+            <!--   <repeatable>true</repeatable>
                <label>Palavras Chave</label>
                <input-type>twobox</input-type>
                <hint>Introduza as palavras chave ou frases do assunto.</hint>
@@ -1121,7 +1138,7 @@
                <required></required>
             </field>
 
-            <field><!-- oaire:19 -->
+            <field>
                <dc-schema>dc</dc-schema>
                <dc-element>coverage</dc-element>
                <dc-qualifier></dc-qualifier>
@@ -1192,9 +1209,9 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
             <field>
                <dc-schema>dc</dc-schema>
                <dc-element>identifier</dc-element>
-               <dc-qualifier></dc-qualifier>
+               <dc-qualifier></dc-qualifier> -->
                <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
-               <repeatable>true</repeatable>
+          <!--     <repeatable>true</repeatable>
                <label>Identificadores</label>
                <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
                <hint>Se este registo tiver algum identificador associado , insira em baixo.</hint>
@@ -1280,7 +1297,15 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
 
          </page>
       </form>
-        </form-definitions>
+        </form-definitions>-->
+
+
+
+
+
+
+
+
         <!-- form-value-pairs populate dropdown and qualdrop-value lists.          -->
         <!-- The form-value-pairs element holds child elements named 'value-pairs' -->
         <!-- A 'value-pairs' element has a value-pairs-name and a dc-term          -->
@@ -1293,10 +1318,13 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
         <!-- Each pair contains a 'displayed-value' element and a 'stored-value'   -->
         <!-- element. A UI list displays the displayed-values, but the program     -->
         <!-- stores the associated stored-values in the database.                  -->
+
+
+
         <form-value-pairs>
             <value-pairs value-pairs-name="creative_commons" dc-term="rights">
 
-            	<!-- Baseado em: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_licensecondition.html#dc-rightslicensecondition -->
+            	<!-- Based on: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_licensecondition.html#dc-rightslicensecondition -->
 
             <pair>
                <displayed-value>Sem Licen&#xe7;a</displayed-value>
@@ -1327,6 +1355,10 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                <stored-value>http://creativecommons.org/licenses/by-nc-sa/4.0/</stored-value>
              </pair>
            </value-pairs>
+
+
+
+
             <value-pairs value-pairs-name="thesis_types" dc-term="type">
                 <pair>
                     <displayed-value>Disserta&#xe7;&#xE3;o de Mestrado</displayed-value>
