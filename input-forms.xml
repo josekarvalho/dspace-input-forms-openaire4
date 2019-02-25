@@ -37,7 +37,30 @@
      <form-definitions>
             <form name="traditional">
                 <page number="1">
-                    <field><!-- ver com fernando  -->
+
+                  <field><!-- OK oaire:1 -->
+                      <dc-schema>dc</dc-schema>
+                      <dc-element>title</dc-element>
+                      <dc-qualifier></dc-qualifier>
+                      <repeatable>false</repeatable>
+                      <label>T&#xED;tulo</label>
+                      <input-type>onebox</input-type>
+                      <hint>Introduza o t&#xED;tulo principal do registo.</hint>
+                      <required>Tem que introduzir um t&#xED;tulo principal do registo.</required>
+                  </field>
+
+                  <field><!-- OK oaire:1 -->
+                      <dc-schema>dc</dc-schema>
+                      <dc-element>title</dc-element>
+                      <dc-qualifier>alternative</dc-qualifier>
+                      <repeatable>true</repeatable>
+                      <label>Outros T&#xED;tulos</label>
+                      <input-type>onebox</input-type>
+                      <hint>Se necess&#xe1;rio, indique o t&#xED;tulo alternativo ou tradu&#xe7;&#xE3;o.</hint>
+                      <required></required>
+                  </field>
+
+                    <field><!-- OK  oaire:2  -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>author</dc-qualifier>
@@ -47,26 +70,39 @@
                         <hint>Introduza os nomes dos autores do trabalho.</hint>
                         <required></required>
                     </field>
-                    <field><!-- OK oaire:1 -->
+
+                    <field><!-- OK  oaire:3  thesis form only -->
                         <dc-schema>dc</dc-schema>
-                        <dc-element>title</dc-element>
-                        <dc-qualifier></dc-qualifier>
-                        <repeatable>false</repeatable>
-                        <label>T&#xED;tulo</label>
-                        <input-type>onebox</input-type>
-                        <hint>Introduza o t&#xED;tulo principal do registo.</hint>
-                        <required>Tem que introduzir um t&#xED;tulo principal do registo.</required>
-                    </field>
-                    <field><!-- OK oaire:1-->
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>title</dc-element>
-                        <dc-qualifier>alternative</dc-qualifier>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>advisor</dc-qualifier>
                         <repeatable>true</repeatable>
-                        <label>Outros T&#xED;tulos</label>
-                        <input-type>onebox</input-type>
-                        <hint>Se necess&#xe1;rio, indique o t&#xED;tulo alternativo ou tradu&#xe7;&#xE3;o.</hint>
+                        <label>Orientador</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza os nomes dos orientadores do trabalho.</hint>
                         <required></required>
                     </field>
+
+                    <field><!-- OK  oaire:3  -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>editor</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Editores</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza os nomes dos editores do trabalho.</hint>
+                        <required></required>
+                    </field>
+                    <field><!-- OK  oaire:3  -->
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>other</dc-qualifier>
+                        <repeatable>true</repeatable>
+                        <label>Outras Colaborações</label>
+                        <input-type>name</input-type>
+                        <hint>Introduza os nomes de outros contribuidores do trabalho.</hint>
+                        <required></required>
+                    </field>
+
                     <field><!-- OK oaire:10-->
                         <dc-schema>dc</dc-schema>
                         <dc-element>date</dc-element>
@@ -77,6 +113,7 @@
                         <hint>Forne&#xe7;a a data da publica&#xe7;&#xE3;o ou distribui&#xe7;&#xE3;o p&#xFA;blica. Pode deixar o m&#xea;s e/ou o dia em branco se n&#xE3;o se aplicar.</hint>
                         <required>Tem que inserir pelo menos o ano.</required>
                     </field>
+
                     <field><!-- OK oaire:9 -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>publisher</dc-element>
@@ -87,15 +124,15 @@
                         <hint>Introduza o nome da entidade respons&#xE1;vel pela publica&#xe7;&#xE3;o ou impress&#xE3;o.</hint>
                         <required></required>
                     </field>
-                   <field><!-- NOOK oaire:? -->
+
+                   <field><!-- OK oaire:6 -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>relation</dc-element>
                         <dc-qualifier>publisherversion</dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
                         <input-type>onebox</input-type>
-                        <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o.
-    Exemplo: http://www.springerlink.com/.</hint>
+                        <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o. Exemplo: http://www.springerlink.com/.</hint>
                         <required></required>
                     </field>
 
@@ -131,7 +168,7 @@
                         <required></required>
                     </field>
 
-                    <field><!-- OK oaire:29 -->
+                    <field><!-- OK oaire:29 - new field -->
                         <dc-schema>oaire</dc-schema>
                         <dc-element>citationEdition</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -142,7 +179,7 @@
                         <required></required>
                     </field>
 
-                    <field><!-- OK oaire:31 -->
+                    <field><!-- OK oaire:31 - new field -->
                         <dc-schema>oaire</dc-schema>
                         <dc-element>citationConferenceDate</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -186,7 +223,7 @@
                         <required></required>
                     </field> -->
 
-                    <field><!-- OK oaire:14 -->
+                <!--    <field> OK oaire:14
                         <dc-schema>dc</dc-schema>
                         <dc-element>identifier</dc-element>
                         <dc-qualifier>doi</dc-qualifier>
@@ -195,7 +232,7 @@
                         <input-type>onebox</input-type>
                         <hint>Se este registo tiver algum identificador DOI associado, insira em baixo.</hint>
                         <required></required>
-                    </field>
+                    </field> -->
 
 
                     <field><!-- OK oaire:14 list -->
@@ -204,7 +241,7 @@
                         <dc-qualifier></dc-qualifier>
                         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                         <repeatable>true</repeatable>
-                        <label>Identificadores</label>
+                        <label>Outros Identificadores</label>
                         <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
                         <hint>Se este registo tiver algum identificador associado, insira em baixo.</hint>
                         <required></required>
@@ -243,15 +280,15 @@
                         <required>Insira o idioma do documento</required>
                     </field>
 
-                    <field><!-- NOOK oaire:22 list #TODO Colocar com esquema OAIRE oaire.version -->
-              			    <dc-schema>dc</dc-schema>
-              			    <dc-element>description</dc-element>
-              			    <dc-qualifier>version</dc-qualifier>
+                    <field><!-- OK oaire:22 -->
+              			    <dc-schema>oaire</dc-schema>
+              			    <dc-element>version</dc-element>
+              			    <dc-qualifier></dc-qualifier>
               			    <repeatable>false</repeatable>
               			    <label>Estado da Publica&#xe7;&#xE3;o</label>
               			    <input-type value-pairs-name="dc_publicationstatus">dropdown</input-type>
               			    <hint>Indique o estado atual da publica&#xe7;&#xE3;o</hint>
-              			    <required>Insira o Estado da Publica&#xe7;&#xE3;o</required>
+              			    <required>Insira o Estado da Publica&#xe7;&#xE3;o depositada</required>
                    </field>
 
                     <!-- Degois to OpenAIRE 4 Mapping  	 -->
@@ -274,6 +311,7 @@
                         <hint></hint>
                     </field>
                 </page>
+
 
                 <page number="2">
                     <field><!-- OK oaire:17 -->
@@ -300,25 +338,17 @@
                         <required></required>
                     </field>
 
-                    <!--
+                    <!-- Pensar em alternativas para metadados: http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_projectid.html#dci-fundingreference -->
+		<!--		Example:  -->
+		<!--			<fundingReference> -->
+		<!--				  <funderName>European Commission</funderName> -->
+		<!--				  <funderIdentifier funderIdentifierType="Crossref Funder ID">http://doi.org/10.13039/100010661</funderIdentifier> -->
+		<!--				  <fundingStream>Horizon 2020 Framework Programme</fundingStream> -->
+		<!--				  <awardNumber awardURI="http://cordis.europa.eu/project/rcn/194062_en.html">643410</awardNumber> -->
+		<!--				  <awardTitle>Open Access Infrastructure for Research in Europe 2020</awardTitle> -->
+		<!--			</fundingReference> -->
 
-					Pensar em alternativas para metadados:
-					http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_projectid.html#dci-fundingreference
-
-				Example:
-
-					<fundingReference>
-						  <funderName>European Commission</funderName>
-						  <funderIdentifier funderIdentifierType="Crossref Funder ID">http://doi.org/10.13039/100010661</funderIdentifier>
-						  <fundingStream>Horizon 2020 Framework Programme</fundingStream>
-						  <awardNumber awardURI="http://cordis.europa.eu/project/rcn/194062_en.html">643410</awardNumber>
-						  <awardTitle>Open Access Infrastructure for Research in Europe 2020</awardTitle>
-					</fundingReference>
-
-                    -->
-
-
-                     <field>
+                     <field><!-- NOOK oaire:4 -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>relation</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -341,11 +371,6 @@
                         <required></required>
                     </field>
 
-                   <!--
-
-                   Redefinir http://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/latest/field_embargoenddate.html#dci-dateembargo
-
-                   -->
                    <field><!-- oaire:19 -->
                       <dc-schema>dc</dc-schema>
                       <dc-element>coverage</dc-element>
@@ -357,14 +382,14 @@
                       <required></required>
                    </field>
 
-                   <field>
+                   <field><!-- oaire:19 qualified -->
                       <dc-schema>dc</dc-schema>
                       <dc-element>coverage</dc-element>
                       <dc-qualifier>temporal</dc-qualifier>
                       <repeatable>true</repeatable>
                       <label>Per&#xED;odo de Tempo Coberto pelos Dados</label>
                       <input-type>onebox</input-type>
-                      <hint>Introduza o per&#xED;odo temporal do trabalho</hint>
+                      <hint>Introduza a abrang&#234;ncia temporal do trabalho</hint>
                       <required></required>
                    </field>
 
@@ -378,18 +403,17 @@
                       <hint>Introduza a abrang&#234;ncia geogr&#xE1;fica dos dados recolhidos</hint>
                       <required></required>
                    </field>
-                   
 
-                   <field><!-- NOOK oaire:20 -->
+                <!--   <field> NOOK oaire:20 - Not used on user interface
                       <dc-schema>dc</dc-schema>
-                      <dc-element>size?????????????????????????</dc-element>
+                      <dc-element>size</dc-element>
                       <dc-qualifier></dc-qualifier>
                       <repeatable>true</repeatable>
                       <label>Tamanho</label>
                       <input-type>onebox</input-type>
                       <hint>Indique o tamanho ou quantidades associadas ao trabalho.</hint>
                       <required></required>
-                   </field>
+                   </field> -->
 
                    <field><!-- OK oaire:32 list -->
                        <dc-schema>dc</dc-schema>
@@ -402,19 +426,19 @@
                        <required></required>
                    </field>
 
-                    <field><!-- Usar oaire.date.available -->
+                    <field><!-- OK Usar oaire.date.available oaire:7 -->
                          <dc-schema>dc</dc-schema>
                          <dc-element>date</dc-element>
                          <dc-qualifier>embargo</dc-qualifier>
                          <repeatable>false</repeatable>
-                         <label>Data Final do Embargo</label>
+                         <label>Data de Fim do Embargo</label>
                          <input-type>date</input-type>
                          <hint>Caso tenha indicado &#34;Acesso Embargado&#34; no campo &#34;Acesso&#34;, indique a data do final do embargo, a partir da qual o documento passar&#xE1; a estar dispon&#xED;vel em Acesso Aberto. Deve indicar pelo menos o Ano e o M&#xEA;s.</hint>
                     </field>
 
 
-                        <!-- Identificar forma ou manter Requisito FCT -->
-                    <field>
+
+                    <field> <!-- rcaap:01 - Identificar forma ou manter Requisito FCT -->
                         <dc-schema>rcaap</dc-schema>
                         <dc-element>embargofct</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -424,16 +448,16 @@
                         <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
                     </field> -->
 
-               <!--  <field>
-			    <dc-schema>rcaap</dc-schema>
-			    <dc-element>contributor</dc-element>
-			    <dc-qualifier>authoremail</dc-qualifier>
-			    <repeatable>false</repeatable>
-			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
-			    <input-type>onebox</input-type>
-			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
-			    <required></required>
-                    </field> -->
+                 <field><!-- rcaap:02 - Manter Requisito FCT ? -->
+            			    <dc-schema>rcaap</dc-schema>
+            			    <dc-element>contributor</dc-element>
+            			    <dc-qualifier>authoremail</dc-qualifier>
+            			    <repeatable>false</repeatable>
+            			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+            			    <input-type>onebox</input-type>
+            			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+            			    <required></required>
+                    </field>
 
                     <field><!-- OK oaire:18 list -->
                         <dc-schema>dc</dc-schema>
@@ -456,7 +480,18 @@
                         <required></required>
                     </field>
 
-                <!--     <field>
+                   <field> <!-- oaire:16 -->
+                      <dc-schema>dc</dc-schema>
+                      <dc-element>source</dc-element>
+                      <dc-qualifier></dc-qualifier>
+                      <repeatable>true</repeatable>
+                      <label>Descri&#xe7;&#xE3;o da Origem do Trabalho</label>
+                      <input-type>textarea</input-type>
+                      <hint> Descri&#xe7;&#xE3;o adicional da do trabalho como por exemplo após um processo de digitalização.</hint>
+                      <required></required>
+                  </field>
+
+                <!--     <field>  template field
                         <dc-schema>dc</dc-schema>
                         <dc-element>description</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -469,6 +504,55 @@
 
                 </page>
             </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1294,34 +1378,37 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <stored-value>http://purl.org/coar/access_right/c_14cb</stored-value>
                 </pair>
             </value-pairs>
+
+
+
             <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
-                <!--<pair>
-                    <displayed-value>DOI</displayed-value>
-                    <stored-value>doi</stored-value>
-                </pair>-->
                 <pair>
-                    <displayed-value>ISSN</displayed-value>
-                    <stored-value>issn</stored-value>
+                    <displayed-value>ARK</displayed-value>
+                    <stored-value>ARK</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>DOI</displayed-value>
+                    <stored-value>DOI</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Handle</displayed-value>
+                    <stored-value>Handle</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>PURL</displayed-value>
+                    <stored-value>PURL</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>URL</displayed-value>
+                    <stored-value>URL</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>URN</displayed-value>
+                    <stored-value>URN</stored-value>
                 </pair>
                 <pair>
                     <displayed-value>Outro</displayed-value>
                     <stored-value>other</stored-value>
-                </pair>
-                <pair>
-                    <displayed-value>ISMN</displayed-value>
-                    <stored-value>ismn</stored-value>
-                </pair>
-                <pair>
-                    <displayed-value>Documento Governamental</displayed-value>
-                    <stored-value>govdoc</stored-value>
-                </pair>
-                <pair>
-                    <displayed-value>URI</displayed-value>
-                    <stored-value>uri</stored-value>
-                </pair>
-                <pair>
-                    <displayed-value>ISBN</displayed-value>
-                    <stored-value>isbn</stored-value>
                 </pair>
             </value-pairs>
 
@@ -1775,7 +1862,7 @@ https://ceds.ed.gov/element/001492
                     <stored-value>other</stored-value>
                 </pair>
                 <pair>
-                    <displayed-value>N/A</displayed-value>
+                    <displayed-valvue>N/A</displayed-value>
                     <stored-value>N/A</stored-value>
                 </pair>
             </value-pairs>
