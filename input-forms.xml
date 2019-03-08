@@ -1490,6 +1490,18 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <stored-value>URN</stored-value>
                 </pair>
                 <pair>
+                    <displayed-value>ISSN</displayed-value>
+                    <stored-value>ISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>eISSN</displayed-value>
+                    <stored-value>eISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISSN-L</displayed-value>
+                    <stored-value>ISSN-L</stored-value>
+                </pair>
+                <pair>
                     <displayed-value>Outro</displayed-value>
                     <stored-value>other</stored-value>
                 </pair>
