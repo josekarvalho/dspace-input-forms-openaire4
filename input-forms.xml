@@ -11,6 +11,7 @@
     <!-- the mapping for handle "default".                                    -->
     <form-map>
         <name-map collection-handle="default" form-name="traditional" />
+        <name-map collection-handle="1579" form-name="thesis" />
     </form-map>
     <!-- The form-definitions map lays out the detailed definition of all the -->
     <!-- submission forms. Each separate form set has a unique name as an     -->
@@ -29,10 +30,21 @@
     <!-- serves as a 'this field is required' flag.                           -->
 
 
-<!-- work in progress tags -->
-<!-- NOOK - need revision-->
+
+
+
+
+
+    <!-- #################################################################################### -->
+    <!-- ###########    Genaral Publications form with OpenAIRE 4 Profile  ################################ -->
+    <!-- #################################################################################### -->
+
+
+
+<!-- work in progress tags      -->
+<!-- NOOK - need revision       -->
 <!-- list - use a specific list -->
-<!-- oaire:x mapping with OpenAIRE 4 fields ID-->
+<!-- oaire:x mapping with OpenAIRE 4 fields ID   -->
 
      <form-definitions>
             <form name="traditional">
@@ -314,13 +326,26 @@
 
 
                 <page number="2">
+
+                  <field><!-- OK oaire:17 -->
+                      <dc-schema>dc</dc-schema>
+                      <dc-element>subject</dc-element>
+                      <dc-qualifier></dc-qualifier>
+                      <!-- An input-type of twobox MUST be marked as repeatable -->
+                      <repeatable>true</repeatable>
+                      <label>Palavras Chave</label>
+                      <input-type>twobox</input-type>
+                      <hint>Introduza as palavras chave ou assuntos.</hint>
+                      <required></required>
+                  </field>
+
                     <field><!-- OK oaire:17 -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>subject</dc-element>
-                        <dc-qualifier></dc-qualifier>
+                        <dc-qualifier>fos</dc-qualifier>
                         <!-- An input-type of twobox MUST be marked as repeatable -->
                         <repeatable>true</repeatable>
-                        <label>Palavras Chave</label>
+                        <label>Palavras Chave (FOS) </label>
                         <input-type>twobox</input-type>
                         <hint>Introduza as palavras chave ou assuntos.</hint>
                         <required></required>
@@ -558,13 +583,12 @@
 
 
 
+<!-- #################################################################################### -->
+<!-- ###########    Thesis form with OpenAIRE 4 Profile  ################################ -->
+<!-- #################################################################################### -->
 
 
-            <!-- ###########    Thesis form #################################### -->
-            <!-- ############################################################### -->
-
-
-      <!--      <form name="thesis">
+            <form name="thesis">
                 <page number="1">
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -678,7 +702,7 @@
                     </field> -->
 
 
-                  <!--  <field>
+                    <field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>subject</dc-element>
                         <dc-qualifier>fos</dc-qualifier>
@@ -688,10 +712,10 @@
                         <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#xE7;&#xE3;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
                         <vocabulary closed="false">fos</vocabulary>
                         <required></required>
-                    </field> -->
+                    </field>
                     <!--  ** Ser&#xE1; preenchido por defeito
            <field><dc-schema>thesis</dc-schema><dc-element>degree</dc-element><dc-qualifier>grantor</dc-qualifier><repeatable>false</repeatable><label>Institui&#xe7;&#xE3;o</label><input-type>onebox</input-type><hint>Nome da Institui&#xe7;&#xE3;o que atribui o grau ao trabalho. Deve ser inclu&#xED;do tal como &#xE9; indicado no documento. </hint><required>Deve indicar o nome da institui&#xe7;&#xE3;o</required></field> -->
-          <!--      </page>
+                </page>
                 <page number="2">
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -799,7 +823,34 @@
                         <hint>Insira alguma informa&#xe7;&#xE3;o adicional se necess&#xE1;rio. </hint>
                     </field>
                 </page>
-            </form> -->
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <!-- <form name="thesisTID">
