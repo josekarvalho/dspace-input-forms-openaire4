@@ -137,10 +137,10 @@
                         <required></required>
                     </field>
 
-                   <field><!-- OK oaire:6 -->
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>relation</dc-element>
-                        <dc-qualifier>publisherversion</dc-qualifier>
+                   <field><!-- OK oaire:6 dc.relation.publisherversion -->
+                        <dc-schema>datacite</dc-schema>
+                        <dc-element>relatedIdentifier</dc-element>
+                        <dc-qualifier></dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
                         <input-type>onebox</input-type>
@@ -440,7 +440,7 @@
                       <required></required>
                    </field> -->
 
-                   <field><!-- OK oaire:32 list -->
+              <!--     <field> OK oaire:32 list
                        <dc-schema>dc</dc-schema>
                        <dc-element>audience</dc-element>
                        <dc-qualifier></dc-qualifier>
@@ -449,12 +449,12 @@
                        <input-type value-pairs-name="common_audience">dropdown</input-type>
                        <hint>Público Alvo do da publicação.</hint>
                        <required></required>
-                   </field>
+                   </field>-->
 
-                    <field><!-- OK Usar oaire.date.available oaire:7 -->
-                         <dc-schema>dc</dc-schema>
+                    <field><!-- OK Usar datacite.date.Available oaire:7 -->
+                         <dc-schema>datacite</dc-schema>
                          <dc-element>date</dc-element>
-                         <dc-qualifier>embargo</dc-qualifier>
+                         <dc-qualifier>Available</dc-qualifier>
                          <repeatable>false</repeatable>
                          <label>Data de Fim do Embargo</label>
                          <input-type>date</input-type>
@@ -767,7 +767,7 @@
                         <required></required>
                     </field>
                     <field>
-                        <dc-schema>dc</dc-schema>
+                        <dc-schema>datacite</dc-schema>
                         <dc-element>date</dc-element>
                         <dc-qualifier>embargo</dc-qualifier>
                         <repeatable>false</repeatable>
@@ -1500,6 +1500,10 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                 <pair>
                     <displayed-value>ISSN-L</displayed-value>
                     <stored-value>ISSN-L</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>TID</displayed-value>
+                    <stored-value>tid</stored-value>
                 </pair>
                 <pair>
                     <displayed-value>Outro</displayed-value>
