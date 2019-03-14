@@ -139,6 +139,7 @@
                         <dc-qualifier></dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
+                        <input-type value-pairs-name="related_identifiers">qualdrop_value</input-type>
                         <input-type>onebox</input-type>
                         <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o. Exemplo: http://www.springerlink.com/.</hint>
                         <required></required>
@@ -220,30 +221,7 @@
                         <required></required>
                     </field> -->
 
-                   <!-- <field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>relation</dc-element>
-                        <dc-qualifier>ispartofseries</dc-qualifier>
-                        <repeatable>true</repeatable>
-                        <label>S&#xE9;rie/N&#xFA;mero</label>
-                        <input-type>series</input-type>
-                        <hint>Introduza o nome da s&#xE9;rie e n&#xFA;mero atribu&#xED;do ao item pela sua comunidade.</hint>
-                        <required></required>
-                    </field> -->
-
-                <!--    <field> OK oaire:14
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>identifier</dc-element>
-                        <dc-qualifier>doi</dc-qualifier>
-                        <repeatable></repeatable>
-                        <label>DOI</label>
-                        <input-type>onebox</input-type>
-                        <hint>Se este registo tiver algum identificador DOI associado, insira em baixo.</hint>
-                        <required></required>
-                    </field> -->
-
-
-                    <field><!-- OK oaire:14 list -->
+                    <field><!-- OK oaire:14 list  - use dc or datacite:relatedIdentifier ???   -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>identifier</dc-element>
                         <dc-qualifier></dc-qualifier>
@@ -256,15 +234,6 @@
                     </field>
 
 
-                        <!-- NOOK oaire:? -->
-                   <!-- <field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>peerreviewed</dc-element>
-                        <label>Revis&#xE3;o por Pares (peer-review)</label>
-                        <input-type value-pairs-name="yes_no">list</input-type>
-                        <hint>Indique se a vers&#xE3;o que est&#xE1; a depositar foi revista por pares especialistas (refereeing).</hint>
-                        <required></required>
-                    </field> -->
 
                     <field><!-- OK oaire:11 list -->
                         <dc-schema>dc</dc-schema>
@@ -274,6 +243,16 @@
                         <label>Tipo</label>
                         <input-type value-pairs-name="common_types">dropdown</input-type>
                         <hint>Selecione o tipo do conte&#xFA;do que est&#xE1; a depositar.</hint>
+                        <required></required>
+                    </field>
+
+                    <!-- NOOK oaire:? -->
+                    <field>
+                        <dc-schema>rcaap</dc-schema>
+                        <dc-element>peerreviewed</dc-element>
+                        <label>Revis&#xE3;o por Pares (peer-review)</label>
+                        <input-type value-pairs-name="yes_no">list</input-type>
+                        <hint>Indique se a vers&#xE3;o que est&#xE1; a depositar foi revista por pares especialistas (refereeing).</hint>
                         <required></required>
                     </field>
 
@@ -341,9 +320,9 @@
                         <dc-qualifier>fos</dc-qualifier>
                         <!-- An input-type of twobox MUST be marked as repeatable -->
                         <repeatable>true</repeatable>
-                        <label>Palavras Chave (FOS) </label>
+                        <label>Palavras Chave (FOS)</label>
                         <input-type>twobox</input-type>
-                        <hint>Introduza as palavras chave ou assuntos.</hint>
+                        <hint>Introduza as palavras chave ou assuntos de acordo com o FOS (Fields of Science)</hint>
                         <required></required>
                         <vocabulary>srsc</vocabulary>
                     </field>
@@ -457,7 +436,16 @@
                          <hint>Caso tenha indicado &#34;Acesso Embargado&#34; no campo &#34;Acesso&#34;, indique a data do final do embargo, a partir da qual o documento passar&#xE1; a estar dispon&#xED;vel em Acesso Aberto. Deve indicar pelo menos o Ano e o M&#xEA;s.</hint>
                     </field>
 
-
+                    <field><!-- rcaap:02 - Manter Requisito ? -->
+               			    <dc-schema>rcaap</dc-schema>
+               			    <dc-element>contributor</dc-element>
+               			    <dc-qualifier>authoremail</dc-qualifier>
+               			    <repeatable>false</repeatable>
+               			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+               			    <input-type>onebox</input-type>
+               			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+               			    <required></required>
+                       </field>
 
                     <field> <!-- rcaap:01 - Identificar forma ou manter Requisito FCT -->
                         <dc-schema>rcaap</dc-schema>
@@ -468,17 +456,6 @@
                         <input-type>textarea</input-type>
                         <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
                     </field> -->
-
-                 <field><!-- rcaap:02 - Manter Requisito FCT ? -->
-            			    <dc-schema>rcaap</dc-schema>
-            			    <dc-element>contributor</dc-element>
-            			    <dc-qualifier>authoremail</dc-qualifier>
-            			    <repeatable>false</repeatable>
-            			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
-            			    <input-type>onebox</input-type>
-            			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
-            			    <required></required>
-                    </field>
 
                     <field><!-- OK oaire:18 list -->
                         <dc-schema>dc</dc-schema>
@@ -501,7 +478,7 @@
                         <required></required>
                     </field>
 
-                   <field> <!-- oaire:16 -->
+          <!--         <field>  oaire:16 
                       <dc-schema>dc</dc-schema>
                       <dc-element>source</dc-element>
                       <dc-qualifier></dc-qualifier>
@@ -510,7 +487,7 @@
                       <input-type>textarea</input-type>
                       <hint> Descri&#xe7;&#xE3;o adicional da do trabalho como por exemplo após um processo de digitalização.</hint>
                       <required></required>
-                  </field>
+                  </field> -->
 
                 <!--     <field>  template field
                         <dc-schema>dc</dc-schema>
@@ -1589,6 +1566,24 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <stored-value>WOS</stored-value>
                 </pair>
             </value-pairs>
+
+<!-- todo and validate -->
+            <value-pairs value-pairs-name="relation_types" dc-term="identifier">
+                <pair>
+                    <displayed-value>IsCitedBy</displayed-value>
+                    <stored-value>IsCitedBy</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Cites</displayed-value>
+                    <stored-value>Cites</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>IsVersionOf</displayed-value>
+                    <stored-value>IsVersionOf</stored-value>
+                </pair>
+<!-- ADD MORE - https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/field_relatedidentifier.html#dci-relatedidentifier -->
+
+
 
 
             <value-pairs value-pairs-name="common_types" dc-term="type">
