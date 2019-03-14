@@ -478,7 +478,7 @@
                         <required></required>
                     </field>
 
-          <!--         <field>  oaire:16 
+          <!--         <field>  oaire:16
                       <dc-schema>dc</dc-schema>
                       <dc-element>source</dc-element>
                       <dc-qualifier></dc-qualifier>
@@ -739,10 +739,11 @@
                         <hint>Esta cole&#xe7;&#xE3;o &#xE9; por predefini&#xe7;&#xE3;o de Acesso Aberto, caso pretenda que este trabalho tenha outra condi&#xe7;&#xE3;o de acesso indique-a aqui.</hint>
                         <required></required>
                     </field>
-                    <field>
+
+                    <field>a<!-- oaire:7  -->
                         <dc-schema>datacite</dc-schema>
                         <dc-element>date</dc-element>
-                        <dc-qualifier>embargo</dc-qualifier>
+                        <dc-qualifier>Available</dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Data Final do Embargo</label>
                         <input-type>date</input-type>
