@@ -1405,6 +1405,8 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <stored-value>no</stored-value>
                 </pair>
             </value-pairs>
+
+
             <value-pairs value-pairs-name="common_rights" dc-term="rights">
 
             	<!-- Com base em: http://vocabularies.coar-repositories.org/documentation/access_rights/
@@ -1584,6 +1586,7 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                 </pair>
 <!-- ADD MORE - https://openaire-guidelines-for-literature-repository-managers.readthedocs.io/en/v4.0.0/field_relatedidentifier.html#dci-relatedidentifier -->
 
+            </value-pairs>
 
 
 
