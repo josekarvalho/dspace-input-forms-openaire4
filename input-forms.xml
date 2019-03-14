@@ -31,10 +31,6 @@
 
 
 
-
-
-
-
     <!-- #################################################################################### -->
     <!-- ###########    Genaral Publications form with OpenAIRE 4 Profile  ################################ -->
     <!-- #################################################################################### -->
@@ -650,10 +646,10 @@
                         <input-type>date</input-type>
                         <hint>Introduza a data em que o trabalho foi submetido para defesa.</hint>
                     </field>
-                    <field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>identifier</dc-element>
-                        <dc-qualifier>tid</dc-qualifier>
+                    <field><!-- oaire:5 dc.identifier.tid - -->
+                        <dc-schema>datacite</dc-schema>
+                        <dc-element>alternateIdentifier</dc-element>
+                        <dc-qualifier>TID</dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Identificador do Trabalho (TID)</label>
                         <input-type>onebox</input-type>
@@ -1501,17 +1497,98 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <displayed-value>ISSN-L</displayed-value>
                     <stored-value>ISSN-L</stored-value>
                 </pair>
-                <pair>
+            <!--    <pair>
                     <displayed-value>TID</displayed-value>
                     <stored-value>tid</stored-value>
-                </pair>
+                </pair> -->
                 <pair>
                     <displayed-value>Outro</displayed-value>
                     <stored-value>other</stored-value>
                 </pair>
             </value-pairs>
 
-
+            <value-pairs value-pairs-name="controlled_identifiers" dc-term="identifier">
+                <pair>
+                    <displayed-value>ARK</displayed-value>
+                    <stored-value>ARK</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>arXiv</displayed-value>
+                    <stored-value>arXiv</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>bibcode</displayed-value>
+                    <stored-value>bibcode</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>DOI</displayed-value>
+                    <stored-value>DOI</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>EAN13</displayed-value>
+                    <stored-value>EAN13</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>EISSN</displayed-value>
+                    <stored-value>EISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>Handle</displayed-value>
+                    <stored-value>Handle</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>IGSN</displayed-value>
+                    <stored-value>IGSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISBN</displayed-value>
+                    <stored-value>ISBN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISSN</displayed-value>
+                    <stored-value>ISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>ISTC</displayed-value>
+                    <stored-value>ISTC</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>LISSN</displayed-value>
+                    <stored-value>LISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>LSID</displayed-value>
+                    <stored-value>LSID</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>PISSN</displayed-value>
+                    <stored-value>PISSN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>PMID</displayed-value>
+                    <stored-value>PMID</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>PURL</displayed-value>
+                    <stored-value>PURL</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>UPC</displayed-value>
+                    <stored-value>UPC</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>URL</displayed-value>
+                    <stored-value>URL</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>URN</displayed-value>
+                    <stored-value>URN</stored-value>
+                </pair>
+                <pair>
+                    <displayed-value>WOS</displayed-value>
+                    <stored-value>WOS</stored-value>
+                </pair>
+            </value-pairs>
 
 
             <value-pairs value-pairs-name="common_types" dc-term="type">
