@@ -1461,8 +1461,8 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <stored-value>ISSN</stored-value>
                 </pair>
                 <pair>
-                    <displayed-value>eISSN</displayed-value>
-                    <stored-value>eISSN</stored-value>
+                    <displayed-value>EISSN</displayed-value>
+                    <stored-value>EISSN</stored-value>
                 </pair>
                 <pair>
                     <displayed-value>ISSN-L</displayed-value>
@@ -1901,7 +1901,7 @@ DRIVER / OPENAIRE Types
 					<displayed-value>Outro (other)</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_1843</stored-value>
 				</pair>
-				
+
             </value-pairs>
             <!-- default language order: (from dspace 1.2.1)
             "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
