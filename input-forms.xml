@@ -11,7 +11,7 @@
     <!-- the mapping for handle "default".                                    -->
     <form-map>
         <name-map collection-handle="default" form-name="traditional" />
-        <name-map collection-handle="1579" form-name="thesis" />
+
     </form-map>
     <!-- The form-definitions map lays out the detailed definition of all the -->
     <!-- submission forms. Each separate form set has a unique name as an     -->
