@@ -130,20 +130,19 @@
                         <dc-qualifier></dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
-                        <input-type value-pairs-name="related_identifiers">qualdrop_value</input-type>
                         <input-type>onebox</input-type>
                         <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o. Exemplo: http://www.springerlink.com/.</hint>
                         <required></required>
                     </field>
 
                     <field><!-- OK oaire:14 list  - use dc or datacite:relatedIdentifier ???   -->
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>identifier</dc-element>
+                        <dc-schema>datacite</dc-schema>
+                        <dc-element>relatedidentifier</dc-element>
                         <dc-qualifier></dc-qualifier>
                         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                         <repeatable>true</repeatable>
                         <label>Outros Identificadores</label>
-                        <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                        <input-type value-pairs-name="controlled_identifiers">qualdrop_value</input-type>
                         <hint>Se este registo tiver algum identificador associado, insira em baixo.</hint>
                         <required></required>
                     </field>
@@ -395,7 +394,7 @@
                    </field>
 
                 <!--   <field> NOOK oaire:20 - Not used on user interface
-                      <dc-schema>dc</dc-schema>
+                      <dc-schema>datacite</dc-schema>
                       <dc-element>size</dc-element>
                       <dc-qualifier></dc-qualifier>
                       <repeatable>true</repeatable>
@@ -1669,23 +1668,23 @@ DRIVER / OPENAIRE Types
 
 
                 <pair>
-    				<displayed-value>Texto (text)</displayed-value>
+    				<displayed-value>Texto</displayed-value>
     				<stored-value>http://purl.org/coar/resource_type/c_18cf</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Anotação (text::annotation)</displayed-value>
+					<displayed-value>- Anotação</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_1162</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Publicação Periódica (text::periodical)</displayed-value>
+					<displayed-value>- Publicação Periódica</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_2659</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Revista (text::periodical::journal)</displayed-value>
+					<displayed-value>-- Revista</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_0640</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>--- Contributo em Revista (text::periodical::journal::contribution to journal)</displayed-value>
+					<displayed-value>--- Contributo em Revista</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_3e5a</stored-value>
 				</pair>
 				<pair>
@@ -1701,11 +1700,11 @@ DRIVER / OPENAIRE Types
 					<stored-value>http://purl.org/coar/resource_type/c_2df8fbb1</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>---- Editorial (text::periodical::journal::contribution to journal::editorial)</displayed-value>
+					<displayed-value>---- Editorial</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_b239</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>---- Artigo de Dados (text::periodical::journal::contribution to journal::data paper)</displayed-value>
+					<displayed-value>---- Artigo de Dados</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_beb9</stored-value>
 				</pair>
 				<pair>
