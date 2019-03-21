@@ -1957,10 +1957,8 @@ https://ceds.ed.gov/element/001492
                <stored-value>Researchers</stored-value>
           </pair>
           <pair>
-               <displayed-value>School Support Staff
-</displayed-value>
-               <stored-value>School Support Staff
-</stored-value>
+               <displayed-value>School Support Staff</displayed-value>
+               <stored-value>School Support Staff</stored-value>
           </pair>
           <pair>
                <displayed-value>Student Financial Aid Providers</displayed-value>
@@ -1978,7 +1976,7 @@ https://ceds.ed.gov/element/001492
                <displayed-value>Other</displayed-value>
                <stored-value>Other</stored-value>
           </pair>
-
+</value-pairs>
 
 
 
