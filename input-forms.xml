@@ -137,7 +137,7 @@
 
                     <field><!-- OK oaire:14 list  - use dc or datacite:relatedIdentifier ???   -->
                         <dc-schema>datacite</dc-schema>
-                        <dc-element>relatedidentifier</dc-element>
+                        <dc-element>relatedIdentifier</dc-element>
                         <dc-qualifier></dc-qualifier>
                         <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
                         <repeatable>true</repeatable>
@@ -263,7 +263,7 @@
               			    <repeatable>false</repeatable>
               			    <label>Estado da Publica&#xe7;&#xE3;o</label>
               			    <input-type value-pairs-name="dc_publicationstatus">dropdown</input-type>
-              			    <hint>Indique o estado atual da publica&#xe7;&#xE3;o</hint>
+              			    <hint>Indique o estado atual da publica&#xe7;&#xE3;o.</hint>
               			    <required>Insira o Estado da Publica&#xe7;&#xE3;o depositada</required>
                    </field>
 
@@ -311,7 +311,7 @@
                         <repeatable>true</repeatable>
                         <label>Palavras Chave (FOS)</label>
                         <input-type>twobox</input-type>
-                        <hint>Introduza as palavras chave ou assuntos de acordo com o FOS (Fields of Science)</hint>
+                        <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#xE7;&#xE3;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
                         <required></required>
                         <vocabulary>srsc</vocabulary>
                     </field>
@@ -378,7 +378,7 @@
                       <repeatable>true</repeatable>
                       <label>Per&#xED;odo de Tempo Coberto pelos Dados</label>
                       <input-type>onebox</input-type>
-                      <hint>Introduza a abrang&#234;ncia temporal do trabalho</hint>
+                      <hint>Introduza a abrang&#234;ncia temporal do trabalho.</hint>
                       <required></required>
                    </field>
 
@@ -389,7 +389,7 @@
                       <repeatable>true</repeatable>
                       <label>Pa&#xED;s ou Âmbito Geogr&#xE1;fico</label>
                       <input-type>onebox</input-type>
-                      <hint>Introduza a abrang&#234;ncia geogr&#xE1;fica dos dados recolhidos</hint>
+                      <hint>Introduza a abrang&#234;ncia geogr&#xE1;fica dos dados recolhidos.</hint>
                       <required></required>
                    </field>
 
@@ -432,7 +432,7 @@
                			    <repeatable>false</repeatable>
                			    <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
                			    <input-type>onebox</input-type>
-               			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+               			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de Acesso Restrito ou Embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
                			    <required></required>
                        </field>
 
@@ -1407,11 +1407,7 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
 
 
             -->
-		<pair>
-                    <displayed-value>Select Value</displayed-value>
-                    <stored-value></stored-value>
-                </pair>
-                <pair>
+	             <pair>
                     <displayed-value>Acesso Aberto</displayed-value>
                     <stored-value>http://purl.org/coar/access_right/c_abf2</stored-value>
                 </pair>
@@ -1468,10 +1464,6 @@ Seleccione o tipo (em mai&#xfa;sculas) e o sub-tipo. ?? necess&#xE1;rio ?? </hin
                     <displayed-value>ISSN-L</displayed-value>
                     <stored-value>ISSN-L</stored-value>
                 </pair>
-            <!--    <pair>
-                    <displayed-value>TID</displayed-value>
-                    <stored-value>tid</stored-value>
-                </pair> -->
                 <pair>
                     <displayed-value>Outro</displayed-value>
                     <stored-value>other</stored-value>
@@ -1688,15 +1680,15 @@ DRIVER / OPENAIRE Types
 					<stored-value>http://purl.org/coar/resource_type/c_3e5a</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>---- text::periodical::journal::contribution to journal::journal article</displayed-value>
+					<displayed-value>---- Artigo em Revista</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_6501</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>----- text::periodical::journal::contribution to journal::journal article::review artice</displayed-value>
+					<displayed-value>----- Artigo de Revisão</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_dcae04bc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>----- Artigo (text::periodical::journal::contribution to journal::journal article::research article)</displayed-value>
+					<displayed-value>----- Artigo Original</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_2df8fbb1</stored-value>
 				</pair>
 				<pair>
@@ -1708,197 +1700,197 @@ DRIVER / OPENAIRE Types
 					<stored-value>http://purl.org/coar/resource_type/c_beb9</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>---- Carta ao Editor (text::periodical::journal::contribution to journal::letter to the editor)</displayed-value>
+					<displayed-value>---- Carta ao Editor</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_545b</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Bibliografia (text::bibliography)</displayed-value>
+					<displayed-value>- Bibliografia</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_86bc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Livro (text::book)</displayed-value>
+					<displayed-value>- Livro</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_2f33</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Capítulo de Livro (text::book::book part)</displayed-value>
+					<displayed-value>-- Capítulo de Livro</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_3248</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Recensão (text::review)</displayed-value>
+					<displayed-value>- Recensão</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_efa0</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Recensão de Livro (text::review::book review)</displayed-value>
+					<displayed-value>-- Recensão de Livro</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_ba08</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Documento de Conferência (text::conference object)</displayed-value>
+					<displayed-value>- Documento de Conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_c94f</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Atas de Conferência (text::conference object::conference proceedings)</displayed-value>
+					<displayed-value>-- Atas de Conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_f744</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>--- Comunicação em Conferência (text::conference object::conference proceedings::conference paper)</displayed-value>
+					<displayed-value>--- Comunicação em Conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_5794</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>--- Poster em Conferência (text::conference object::conference proceedings::conference poster)</displayed-value>
+					<displayed-value>--- Poster em Conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_6670</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Comunicação não publicada nas atas da conferência (text::conference object::conference paper not in proceedings)</displayed-value>
+					<displayed-value>-- Comunicação não publicada nas atas da conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18cp</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Poster não publicado nas atas da conferência (text::conference object::conference poster not in proceedings)</displayed-value>
+					<displayed-value>-- Poster não publicado nas atas da conferência</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18co</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Palestra (text::lecture)</displayed-value>
+					<displayed-value>- Palestra</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_8544</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Carta (text::letter)</displayed-value>
+					<displayed-value>- Carta</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_0857</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Patente (text::patent)</displayed-value>
+					<displayed-value>- Patente</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_15cd</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Preprint (text::preprint)</displayed-value>
+					<displayed-value>- Preprint</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_816b</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Relatório (text::report)</displayed-value>
+					<displayed-value>- Relatório</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_93fc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Capítulo de Relatório (text::report::report part)</displayed-value>
+					<displayed-value>-- Capítulo de Relatório</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_ba1f</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Relatório Interno (text::report::internal report)</displayed-value>
+					<displayed-value>-- Relatório Interno</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18ww</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Memorando (text::report::memorandum)</displayed-value>
+					<displayed-value>-- Memorando</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18wz</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Outro Relatório (text::report::other type of report)</displayed-value>
+					<displayed-value>-- Outro Relatório</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18wq</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Relatório de Política (text::report::policy report)</displayed-value>
+					<displayed-value>-- Relatório de Política</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_186u</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Entregável de Projeto (text::report::project deliverable)</displayed-value>
+					<displayed-value>-- Entregável de Projeto</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18op</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Relatório para Organismo Financiador (text::report::report to funding agency)</displayed-value>
+					<displayed-value>-- Relatório para Organismo Financiador</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18hj</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Relatório de Investigação (text::report::research report)</displayed-value>
+					<displayed-value>-- Relatório de Investigação</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18ws</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Relatório Técnico (text::report::technical report)</displayed-value>
+					<displayed-value>-- Relatório Técnico</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18gh</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Proposta de Investigação (text::research proposal)</displayed-value>
+					<displayed-value>- Proposta de Investigação</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_baaf</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Documentação Técnica (text::technical documentation)</displayed-value>
+					<displayed-value>- Documentação Técnica</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_71bd</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Working Paper (text::working paper)</displayed-value>
+					<displayed-value>- Working Paper</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_8042</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Tese (text::thesis)</displayed-value>
+					<displayed-value>- Tese</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_46ec</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Trabalho de Fim de Curso (text::thesis::bachelor thesis)</displayed-value>
+					<displayed-value>-- Trabalho de Fim de Curso</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_7a1f</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Tese de Doutoramento (text::thesis::doctoral thesis)</displayed-value>
+					<displayed-value>-- Tese de Doutoramento</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_db06</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Dissertação de Mestrado (text::thesis::master thesis)</displayed-value>
+					<displayed-value>-- Dissertação de Mestrado</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_bdcc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Notação Musical (text::musical notation)</displayed-value>
+					<displayed-value>- Notação Musical</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18cw</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>Imagem (image)</displayed-value>
+					<displayed-value>Imagem</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_c513</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Imagem Animada (image::moving image)</displayed-value>
+					<displayed-value>- Imagem Animada</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_8a7e</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>-- Vídeo (image::moving image::video)</displayed-value>
+					<displayed-value>-- Vídeo</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_12ce</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Imagem Estática (image::still image)</displayed-value>
+					<displayed-value>- Imagem Estática</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_ecc8</stored-value>
 				</pair>
 
 				<pair>
-					<displayed-value>Software (software)</displayed-value>
+					<displayed-value>Software</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_5ce6</stored-value>
 				</pair>
 
 				<pair>
-					<displayed-value>Material Cartográfico (cartographic material)</displayed-value>
+					<displayed-value>Material Cartográfico</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_12cc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Mapa (cartographic material::map)</displayed-value>
+					<displayed-value>- Mapa</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_12cd</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>Recurso Interativo (interactive resource)</displayed-value>
+					<displayed-value>Recurso Interativo</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_e9a0</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Website (interactive resource::website)</displayed-value>
+					<displayed-value>- Website</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_7ad9</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>Som (sound)</displayed-value>
+					<displayed-value>Som</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18cc</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>- Composição Musical (sound::musical composition)</displayed-value>
+					<displayed-value>- Composição Musical</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_18cd</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>Workflow (workflow)</displayed-value>
+					<displayed-value>Workflow</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_393c</stored-value>
 				</pair>
         <pair>
-					<displayed-value>Conjunto de Dados de Investigação (dataset)</displayed-value>
+					<displayed-value>Conjunto de Dados de Investigação</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_ddb1</stored-value>
 				</pair>
 				<pair>
-					<displayed-value>Outro (other)</displayed-value>
+					<displayed-value>Outro</displayed-value>
 					<stored-value>http://purl.org/coar/resource_type/c_1843</stored-value>
 				</pair>
 
@@ -2042,39 +2034,39 @@ https://ceds.ed.gov/element/001492
 -->
 
 		<pair>
-		    	<displayed-value>Selecione o estado</displayed-value>
+		    	<displayed-value>Selecione a versão</displayed-value>
 		     	<stored-value></stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Not Applicable (or Unknown)</displayed-value>
+			<displayed-value>Não Aplicável (ou desconhecido)</displayed-value>
 			<stored-value>NA</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Author's Original</displayed-value>
+			<displayed-value>Original do Autor</displayed-value>
 			<stored-value>AO</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Submitted Manuscript Under Review</displayed-value>
+			<displayed-value>Manuscrito submetido para revisão</displayed-value>
 			<stored-value>SMUR</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Accepted Manuscript</displayed-value>
+			<displayed-value>Manuscrito Aceite</displayed-value>
 			<stored-value>AM</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Proof</displayed-value>
+			<displayed-value>Prova</displayed-value>
 			<stored-value>P</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Version of Record</displayed-value>
+			<displayed-value>Versão final da editora</displayed-value>
 			<stored-value>VoR</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Corrected Version of Record</displayed-value>
+			<displayed-value>Correção da Versão final da editora</displayed-value>
 			<stored-value>CVoR</stored-value>
 		</pair>
 		<pair>
-			<displayed-value>Enhanced Version of Record</displayed-value>
+			<displayed-value>Versão final da editora Melhorada</displayed-value>
 			<stored-value>EVoR</stored-value>
 		</pair>
 	</value-pairs>
