@@ -313,7 +313,7 @@
                         <input-type>twobox</input-type>
                         <hint>Clique em &#x22;Assuntos&#x22; para selecionar a &#xE1;rea cient&#xED;fica associada ao trabalho de acordo com classifica&#xE7;&#xE3;o &lt;a href="http://www.oecd.org/science/inno/38235147.pdf" target="_blank"&gt;FOS&lt;/a&gt;.</hint>
                         <required></required>
-                        <vocabulary>srsc</vocabulary>
+                        <vocabulary>fos</vocabulary>
                     </field>
 
                     <field><!-- OK oaire:12 -->
@@ -405,7 +405,7 @@
                    </field> -->
 
               <!--     <field> OK oaire:32 list
-                       <dc-schema>dc</dc-schema>
+                       <dc-schema>dcterms</dc-schema>
                        <dc-element>audience</dc-element>
                        <dc-qualifier></dc-qualifier>
                        <repeatable>true</repeatable>
@@ -434,7 +434,7 @@
                			    <input-type>onebox</input-type>
                			    <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de Acesso Restrito ou Embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
                			    <required></required>
-                       </field>
+                    </field>
 
                     <field> <!-- rcaap:01 - Identificar forma ou manter Requisito FCT -->
                         <dc-schema>rcaap</dc-schema>
@@ -632,7 +632,7 @@
                         <repeatable>false</repeatable>
                         <label>Designa&#xe7;&#xE3;o</label>
                         <input-type>onebox</input-type>
-                        <hint>Designa&#xe7;&#xE3;o do grau associado ao trabalho, tal como apresentado na obra. (exemplo: Mestrado em Tecnologias Educativas)</hint>
+                        <hint>Designa&#xe7;&#xE3;o do grau associado ao trabalho, tal como apresentado na obra (exemplo: Mestrado em Tecnologias Educativas).</hint>
                     </field>
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -699,16 +699,19 @@
                         <input-type>twobox</input-type>
                         <hint>Introduza as palavras-chave ou assuntos.</hint>
                     </field>
-                    <field>
+
+
+                    <field><!-- OK oaire:8 list -->
                         <dc-schema>dc</dc-schema>
                         <dc-element>language</dc-element>
                         <dc-qualifier>iso</dc-qualifier>
                         <repeatable>false</repeatable>
                         <label>Idioma</label>
                         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                        <hint>Selecione o idioma predominante do trabalho. Se o idioma n&#xE3;o aparecer listado em baixo selecione "Outro".</hint>
+                        <hint>Selecione o idioma do conte&#xFA;do principal do trabalho. Se o idioma N&#xE3;o aparecer na lista em baixo selecione "Outro". Se ao conte&#xFA;do N&#xE3;o se aplicar um idioma (por exemplo, uma imagem) selecione "N/A".</hint>
                         <required>Insira o idioma do documento</required>
                     </field>
+
                     <field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>relation</dc-element>
@@ -748,15 +751,15 @@
                         <input-type>textarea</input-type>
                         <hint>No caso da publica&#xe7;&#xE3;o ter financiamento FCT e de ter indicado um per&#xED;odo de embargo superior a 12 meses (nas ci&#234;ncias sociais e humanidades) ou 6 meses para as restantes &#xE1;reas indique as raz&#xF5;es.</hint>
                     </field>
-                   <field>
-                        <dc-schema>rcaap</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>authoremail</dc-qualifier>
-                        <repeatable>false</repeatable>
-                        <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
-                        <input-type>onebox</input-type>
-                        <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se a tese for de acesso restrito ou embargado, insira aqui o e-mail do autor(a) da tese  para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
-                        <required></required>
+                    <field><!-- rcaap:02 - Manter Requisito ? -->
+                         <dc-schema>rcaap</dc-schema>
+                         <dc-element>contributor</dc-element>
+                         <dc-qualifier>authoremail</dc-qualifier>
+                         <repeatable>false</repeatable>
+                         <label>Contacto do autor(a) para envio de pedido de c&#xF3;pia </label>
+                         <input-type>onebox</input-type>
+                         <hint>De acordo com a informa&#xe7;&#xE3;o anterior, se o registo for de Acesso Restrito ou Embargado, insira aqui o e-mail do autor(a) para posterior envio de resposta a eventuais pedidos de c&#xF3;pia ou de acesso.</hint>
+                         <required></required>
                     </field>
                     <field>
                         <dc-schema>dc</dc-schema>
@@ -774,7 +777,7 @@
                         <repeatable>true</repeatable>
                         <label>Outra(s) entidade(s) patrocinadora(s)</label>
                         <input-type>textarea</input-type>
-                        <hint>Introduza os nomes de eventuais patrocinadores do trabalho</hint>
+                        <hint>Introduza os nomes de eventuais patrocinadores do trabalho.</hint>
                         <required></required>
                     </field>
                     <field>
@@ -1045,7 +1048,7 @@
 	    	                    <repeatable>true</repeatable>
 	    	                    <label>Outra(s) entidade(s) patrocinadora(s)</label>
 	    	                    <input-type>textarea</input-type>
-	    	                    <hint>Introduza os nomes de eventuais patrocinadores do trabalho</hint>
+	    	                    <hint>Introduza os nomes de eventuais patrocinadores do trabalho.</hint>
 	    	                    <required></required>
 	    	                </field>
 	    	                <field>
