@@ -460,7 +460,7 @@
                         <dc-schema>dc</dc-schema>
                         <dc-element>description</dc-element>
                         <dc-qualifier>sponsorship</dc-qualifier>
-                        <repeatable>false</repeatable>
+                        <repeatable>true</repeatable>
                         <label>Patrocinadores</label>
                         <input-type>textarea</input-type>
                         <hint> Introduza os nomes de eventuais patrocinadores na caixa em baixo. </hint>
