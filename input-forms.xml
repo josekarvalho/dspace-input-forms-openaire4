@@ -128,7 +128,7 @@
                         <dc-schema>datacite</dc-schema>
                         <dc-element>relatedIdentifier</dc-element>
                         <dc-qualifier>Isversionof</dc-qualifier>
-                        <repeatable>false</repeatable>
+                        <repeatable>true</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
                         <!-- <input-type>onebox</input-type> -->
                         <input-type value-pairs-name="controlled_identifiers">qualdrop_value</input-type>
