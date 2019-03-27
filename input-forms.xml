@@ -124,14 +124,13 @@
                         <required></required>
                     </field>
 
-                   <field><!-- OK oaire:6 dc.relation.publisherversion -->
-                        <dc-schema>datacite</dc-schema>
-                        <dc-element>relatedIdentifier</dc-element>
-                        <dc-qualifier>Isversionof</dc-qualifier>
-                        <repeatable>true</repeatable>
+                   <field><!-- changed due to DSpace limitations on using twice the same element - oaire:6 dc.relation.publisherversion -->
+                        <dc-schema>rcaap</dc-schema>
+                        <dc-element>publisherversion</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <repeatable>false</repeatable>
                         <label>Vers&#xE3;o da Editora</label>
-                        <!-- <input-type>onebox</input-type> -->
-                        <input-type value-pairs-name="controlled_identifiers">qualdrop_value</input-type>
+                        <input-type>onebox</input-type>
                         <hint>Introduza o endere&#xe7;o eletr&#xf3;nico da vers&#xE3;o do artigo publicado na editora. Algumas revistas exigem a coloca&#xe7;&#xE3;o de um link para a sua vers&#xE3;o. Exemplo: http://www.springerlink.com/.</hint>
                         <required></required>
                     </field>
