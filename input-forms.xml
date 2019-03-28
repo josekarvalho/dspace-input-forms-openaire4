@@ -76,7 +76,7 @@
                         <label>Autores</label>
                         <input-type>name</input-type>
                         <hint>Introduza o nome do(s) autor(es) do trabalho e clique para procurar o respetivo identificador no ORCID ou Ciência Vitae.</hint>
-                        <required></required>
+                        <required>Deve indicar pelo menos um autor obrigatório.</required>
                     </field>
 
 
