@@ -264,7 +264,7 @@
               			    <label>Estado da Publica&#xe7;&#xE3;o</label>
               			    <input-type value-pairs-name="dc_publicationstatus">dropdown</input-type>
               			    <hint>Indique o estado atual da publica&#xe7;&#xE3;o.</hint>
-              			    <required>Insira o Estado da Publica&#xe7;&#xE3;o depositada</required>
+              			    <required></required>
                    </field>
 
                     <!-- Degois to OpenAIRE 4 Mapping  	 -->
